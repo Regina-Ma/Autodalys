@@ -1,16 +1,12 @@
 const mongoose = require("mongoose");
+const makeSchema = require("./make");
 
 const Schema = mongoose.Schema;
 
 const modelSchema = new Schema({
-  make_id: {
-    type: Schema.Types.ObjectId,
-    ref: "Make",
-    required: true,
-  },
-  series_id: {
-    type: Schema.Types.ObjectId,
-    ref: "Series",
+  make: makeSchema,
+  series: {
+    type: String,
     required: false,
   },
   model: {

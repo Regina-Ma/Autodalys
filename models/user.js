@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const addressSchema = require("./address");
 
 const Schema = mongoose.Schema;
 
@@ -25,134 +26,96 @@ const userSchema = new Schema({
   },
   role: {
     type: String,
-    enum: ["admin", "pirkėjas", "pardavėjas"],
+    enum: ["admin", "buyer", "seller"],
     required: true,
   },
   type: {
     type: String,
-    enum: ["fizinis asmuo", "juridinis asmuo"],
+    enum: ["person", "company"],
     required: true,
   },
   contacts: {
     name: {
       type: String,
-      required: () => this.type === "fizinis asmuo",
+      required: () => this.type === "person",
     },
     surname: {
       type: String,
-      required: () => this.type === "fizinis asmuo",
+      required: () => this.type === "person",
     },
-    company_id: {
+    companyId: {
       type: Schema.Types.ObjectId,
       ref: "Company",
-      required: () => this.type === "juridinis asmuo",
+      required: () => this.type === "company",
     },
-    company_name: {
+    companyName: {
       type: String,
       ref: "Company",
-      required: () => this.type === "juridinis asmuo",
+      required: () => this.type === "company",
     },
-    company_code: {
+    companyCode: {
       type: String,
       ref: "Company",
-      required: () => this.type === "juridinis asmuo",
+      required: () => this.type === "company",
     },
     phone: {
       type: String,
       required: true,
     },
-    VAT_code: {
+    VAT: {
       type: String,
       ref: "Company",
-      required: () => this.type === "juridinis asmuo",
+      required: () => this.type === "company",
     },
-    address: {
-      billing_addresses: [
+    addresses: {
+      billingAddresses: [
         {
           name: {
             type: String,
-            required: () => this.type === "fizinis asmuo",
+            required: () => this.type === "person",
           },
           surname: {
             type: String,
-            required: () => this.type === "fizinis asmuo",
+            required: () => this.type === "person",
           },
-          company_name: {
+          companyName: {
             type: String,
-            required: () => this.type === "juridinis asmuo",
+            required: () => this.type === "company",
           },
-          company_code: {
+          companyCode: {
             type: String,
-            required: () => this.type === "juridinis asmuo",
+            required: () => this.type === "company",
           },
           phone: {
             type: String,
             required: true,
           },
-          address: {
-            type: String,
-            required: true,
-          },
-          city: {
-            type: String,
-            required: true,
-          },
-          zip_code: {
-            type: String,
-            required: true,
-          },
-          region: {
-            type: String,
-            required: true,
-          },
-          country: {
-            type: String,
-            required: true,
-          },
+          address: [addressSchema],
         },
       ],
-      shipping_addresses: [
+      shippingAddresses: [
         {
           name: {
             type: String,
-            required: () => this.type === "fizinis asmuo",
+            required: () => this.type === "person",
           },
           surname: {
             type: String,
-            required: () => this.type === "fizinis asmuo",
+            required: () => this.type === "person",
           },
-          company_name: {
+          companyName: {
             type: String,
-            required: () => this.type === "juridinis asmuo",
+            required: () => this.type === "company",
           },
-          company_code: {
+          companyCode: {
             type: String,
-            required: () => this.type === "juridinis asmuo",
+            required: () => this.type === "company",
           },
           phone: {
             type: String,
             required: true,
           },
-          address: {
-            type: String,
-            required: true,
-          },
-          city: {
-            type: String,
-            required: true,
-          },
-          zip_code: {
-            type: String,
-            required: true,
-          },
-          region: {
-            type: String,
-            required: true,
-          },
-          country: {
-            type: String,
-            required: true,
-          },
+          address: [addressSchema],
         },
       ],
     },
@@ -160,7 +123,7 @@ const userSchema = new Schema({
   cart: {
     items: [
       {
-        part_id: {
+        partId: {
           type: Schema.Types.ObjectId,
           ref: "Part",
           required: true,

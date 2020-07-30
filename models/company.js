@@ -1,49 +1,31 @@
 const mongoose = require("mongoose");
+const addressSchema = require("./address");
 
 const Schema = mongoose.Schema;
 
 const companySchema = new Schema({
-  company_name: {
+  companyName: {
     type: String,
     required: true,
   },
-  company_code: {
+  companyCode: {
     type: String,
     required: true,
   },
-  VAT_code: {
+  VAT: {
     type: String,
     required: true,
   },
-  company_phone: {
+  companyPhone: {
     type: String,
     required: true,
   },
-  company_email: {
+  companyEmail: {
     type: String,
     required: true,
   },
-  address: {
-    type: String,
-    required: true,
-  },
-  city: {
-    type: String,
-    required: true,
-  },
-  zip_code: {
-    type: String,
-    required: true,
-  },
-  region: {
-    type: String,
-    required: true,
-  },
-  country: {
-    type: String,
-    required: true,
-  },
-  logo: {
+  address: addressSchema,
+  logoURL: {
     type: String,
     required: true,
   },
@@ -52,11 +34,11 @@ const companySchema = new Schema({
     enum: ["EUR", "USD"],
     required: true,
   },
-  working_hours: {
+  workingHours: {
     type: String,
     required: false,
   },
-  owner_id: {
+  ownerId: {
     type: Schema.Types.ObjectId,
     ref: "User",
     required: true,

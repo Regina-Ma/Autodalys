@@ -1,76 +1,80 @@
 const mongoose = require("mongoose");
+const modelSchema = require("./model");
+const engineSchema = require("./engine");
 
 const Schema = mongoose.Schema;
 
 const carSchema = new Schema({
-  make_id: {
-    type: Schema.Types.ObjectId,
-    ref: "Make",
+  model: {
+    type: modelSchema,
     required: true,
   },
-  series_id: {
-    type: Schema.Types.ObjectId,
-    ref: "Series",
+  engine: {
+    type: engineSchema,
     required: false,
   },
-  model_id: {
-    type: Schema.Types.ObjectId,
-    ref: "Model",
-    required: true,
-  },
-  production_year: {
+  productionYear: {
     type: String,
     required: true,
   },
-  production_start: {
+  productionStart: {
     type: String,
     required: true,
   },
-  production_end: {
+  productionEnd: {
     type: String,
     required: true,
   },
   color: {
     type: String,
+    enum: [
+      "black",
+      "grey",
+      "white",
+      "violet",
+      "blue",
+      "green",
+      "yellow",
+      "orange",
+      "red",
+      "brown",
+      "mixed",
+      "other",
+    ],
     required: false,
   },
-  steering_wheel_position: {
+  steeringWheelPosition: {
     type: String,
-    enum: ["L", "R"], // L - left; R - right
-    required: true,
+    enum: ["left", "right"],
+    required: false,
   },
   transmission: {
     type: String,
-    enum: ["M", "A"], // M - manual; A - automatic
-    required: true,
+    enum: ["manual", "automatic"],
+    required: false,
   },
-  body_type: {
+  bodyType: {
     type: String,
     enum: [
-      "Other",
-      "Sedan",
-      "Hatchback",
-      "Caravan",
-      "Minivan",
-      "SUV",
-      "Coupe",
-      "Commercial",
-      "Cabriolet",
-      "Roadster",
-      "Limousine",
-      "Pickup",
+      "other",
+      "sedan",
+      "hatchback",
+      "caravan",
+      "minivan",
+      "suv",
+      "coupe",
+      "commercial",
+      "cabriolet",
+      "roadster",
+      "limousine",
+      "pickup",
     ],
-    required: true,
+    required: false,
   },
-  driving_wheels: {
+  drivingWheels: {
     type: String,
-    enum: ["F", "R", "A"], // F - front; R - rear; A - all wheel drive
-    required: true,
-  },
-  engine_id: {
-    type: Schema.Types.ObjectId,
-    ref: "Engine",
-    required: true,
+    enum: ["front", "rear", "all"],
+    required: false,
   },
 });
 

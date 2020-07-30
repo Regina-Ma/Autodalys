@@ -7,7 +7,7 @@ const makeSchema = new Schema({
     type: String,
     required: true,
   },
-  make_logo: {
+  logoUrl: {
     type: String,
     required: true,
   },

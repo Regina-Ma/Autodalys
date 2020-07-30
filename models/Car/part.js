@@ -1,13 +1,35 @@
 const mongoose = require("mongoose");
+const carSchema = require("./car");
 
 const Schema = mongoose.Schema;
 
-const partSchema = new Schema({
+const categorySchema = new Schema({
   name: {
     type: String,
     required: true,
   },
-  product_code: {
+  iconURL: {
+    type: String,
+    required: true,
+  },
+});
+
+const partSchema = new Schema({
+  SKU: {
+    type: String,
+    required: true,
+  },
+  category: categorySchema,
+  superCategory: categorySchema.add({ superCategory: categorySchema }),
+  car: {
+    type: carSchema,
+    required: true,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  productCode: {
     type: String,
     required: true,
   },
@@ -19,12 +41,7 @@ const partSchema = new Schema({
     type: Number,
     required: true,
   },
-  currency: {
-    type: String,
-    enum: ["EUR", "USD"],
-    required: true,
-  },
-  photos: [
+  photoUrls: [
     {
       type: String,
       required: false,
@@ -32,12 +49,12 @@ const partSchema = new Schema({
   ],
   condition: {
     type: String,
-    enum: ["N", "U"], // N - new, U - used
+    enum: ["new", "used"],
     required: true,
   },
   status: {
     type: String,
-    enum: ["A", "R", "S"], // A - available, R - reserved, S - sold
+    enum: ["available", "reserved", "sold"],
     required: true,
   },
   width: {
@@ -59,21 +76,6 @@ const partSchema = new Schema({
   color: {
     type: String,
     required: false,
-  },
-  category_id: {
-    type: Schema.Types.ObjectId,
-    ref: "Category",
-    required: true,
-  },
-  model_id: {
-    type: Schema.Types.ObjectId,
-    ref: "Model",
-    required: true,
-  },
-  car_id: {
-    type: Schema.Types.ObjectId,
-    ref: "Car",
-    required: true,
   },
 });
 

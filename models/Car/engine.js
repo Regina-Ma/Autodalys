@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const modelSchema = require("./model");
 
 const Schema = mongoose.Schema;
 
@@ -11,19 +12,15 @@ const engineSchema = new Schema({
     type: String,
     required: true,
   },
-  production_start: {
+  productionStart: {
     type: String,
     required: true,
   },
-  production_end: {
+  productionEnd: {
     type: String,
     required: true,
   },
-  model_id: {
-    type: Schema.Types.ObjectId,
-    ref: "Model",
-    required: true,
-  },
+  models: [modelSchema],
   power: {
     type: Number,
     required: true,
@@ -35,15 +32,15 @@ const engineSchema = new Schema({
   fuel: {
     type: String,
     enum: [
-      "Diesel",
-      "Gasoline",
-      "Gasoline / gas",
-      "Gasoline / electricity",
-      "Electricity",
-      "Diesel / electricity",
-      "Diesel / gas",
-      "Bioethanol",
-      "Other",
+      "diesel",
+      "gasoline",
+      "gasoline_gas",
+      "gasoline_electricity",
+      "electricity",
+      "diesel_electricity",
+      "diesel_gas",
+      "bioethanol",
+      "other",
     ],
     required: true,
   },
