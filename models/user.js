@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const addressSchema = require("./address");
+const partSchema = require("./Car/part");
 
 const Schema = mongoose.Schema;
 
@@ -123,16 +124,7 @@ const userSchema = new Schema({
   cart: {
     items: [
       {
-        partId: {
-          type: Schema.Types.ObjectId,
-          ref: "Part",
-          required: true,
-        },
-        price: {
-          type: Number,
-          ref: "Part",
-          required: true,
-        },
+        part: partSchema,
         quantity: {
           type: Number,
           required: true,

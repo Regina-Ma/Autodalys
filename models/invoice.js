@@ -1,25 +1,21 @@
 const mongoose = require("mongoose");
+
+const userSchema = require("./user");
+const orderSchema = require("./order");
 const partSchema = require("./Car/part");
 
 const Schema = mongoose.Schema;
 
-const orderSchema = new Schema({
-  buyerId: {
-    type: Schema.Types.ObjectId,
-    required: true,
-    ref: "User",
-  },
-  orderCreated: {
+const invoiceSchema = new Schema({
+  buyerId: userSchema,
+  sellerId: userSchema,
+  orderId: orderSchema,
+  invoiceDate: {
     type: Date,
     required: true,
   },
   items: [
     {
-      sellerId: {
-        type: Schema.Types.ObjectId,
-        required: true,
-        ref: "User",
-      },
       part: partSchema,
       quantity: {
         type: Number,
@@ -56,16 +52,6 @@ const orderSchema = new Schema({
     type: Number,
     required: true,
   },
-  paymentType: {
-    type: String,
-    enum: ["paypal", "paysera"],
-    required: true,
-  },
-  orderStatus: {
-    type: String,
-    enum: ["unpaid", "paid", "processing", "shipped", "delivered"],
-    required: true,
-  },
 });
 
-module.exports = mongoose.model("Order", orderSchema);
+module.exports = mongoose.model("Invoice", invoiceSchema);

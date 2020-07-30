@@ -33,11 +33,29 @@ const partSchema = new Schema({
     type: String,
     required: true,
   },
+  position: {
+    type: String,
+    enum: [
+      "front",
+      "rear",
+      "left",
+      "right",
+      "front_left",
+      "front_right",
+      "rear_left",
+      "rear_right",
+    ],
+    required: false,
+  },
   description: {
     type: String,
     required: true,
   },
   price: {
+    type: Number,
+    required: true,
+  },
+  priceVAT: {
     type: Number,
     required: true,
   },

@@ -76,6 +76,12 @@ const carSchema = new Schema({
     enum: ["front", "rear", "all"],
     required: false,
   },
+  photoUrls: [
+    {
+      type: String,
+      required: false,
+    },
+  ],
 });
 
 module.exports = mongoose.model("Car", carSchema);
