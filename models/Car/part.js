@@ -19,8 +19,16 @@ const partSchema = new Schema({
     type: String,
     required: true,
   },
-  category: categorySchema,
-  superCategory: categorySchema.add({ superCategory: categorySchema }),
+  category: {
+    type: categorySchema,
+    required: true,
+  },
+  superCategory: categorySchema.add({
+    superCategory: {
+      type: categorySchema,
+      required: true,
+    },
+  }),
   car: {
     type: carSchema,
     required: true,

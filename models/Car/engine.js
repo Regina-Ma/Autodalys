@@ -3,6 +3,17 @@ const modelSchema = require("./model");
 
 const Schema = mongoose.Schema;
 
+const powerSchema = new Schema({
+  kWh: {
+    type: Number,
+    required: true,
+  },
+  hp: {
+    type: Number,
+    required: true,
+  },
+});
+
 const engineSchema = new Schema({
   name: {
     type: String,
@@ -22,7 +33,7 @@ const engineSchema = new Schema({
   },
   models: [modelSchema],
   power: {
-    type: Number,
+    type: powerSchema,
     required: true,
   },
   capacity: {
