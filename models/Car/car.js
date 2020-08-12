@@ -1,27 +1,42 @@
 const mongoose = require("mongoose");
-const modelSchema = require("./model");
-const engineSchema = require("./engine");
+const powerSchema = require("./engine");
 
 const Schema = mongoose.Schema;
 
 const carSchema = new Schema({
   model: {
-    type: modelSchema,
-    required: true,
+    modelId: {
+      type: Schema.Types.ObjectId,
+      required: true,
+    },
+    modelName: {
+      type: String,
+      required: true,
+    },
+    makeName: {
+      type: String,
+      required: true,
+    },
   },
   engine: {
-    type: engineSchema,
-    required: false,
+    engineId: {
+      type: Schema.Types.ObjectId,
+      required: false,
+    },
+    engineFuel: {
+      type: String,
+      required: true,
+    },
+    engineCapacity: {
+      type: Number,
+      required: true,
+    },
+    enginePower: {
+      type: powerSchema,
+      required: true,
+    },
   },
   productionYear: {
-    type: String,
-    required: true,
-  },
-  productionStart: {
-    type: String,
-    required: true,
-  },
-  productionEnd: {
     type: String,
     required: true,
   },
@@ -79,6 +94,19 @@ const carSchema = new Schema({
   photoUrls: [
     {
       type: String,
+      required: false,
+    },
+  ],
+  parts: [
+    {
+      partId: {
+        type: Schema.Types.ObjectId,
+        ref: "Part",
+      },
+      name: {
+        type: String,
+        required: true,
+      },
       required: false,
     },
   ],
