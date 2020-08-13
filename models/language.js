@@ -16,6 +16,7 @@ const languageSchema = new Schema({
       pageDescription: {
         type: String,
         required: true,
+        max: 160,
       },
       pageFields: [
         {

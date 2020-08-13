@@ -92,6 +92,21 @@ const userSchema = new Schema(
         required: true,
       },
     },
+    favorites: {
+      items: [
+        {
+          part: partSchema,
+          quantity: {
+            type: Number,
+            required: true,
+          },
+        },
+      ],
+      totalItemsPrice: {
+        type: Number,
+        required: true,
+      },
+    },
   },
   { timestamps: true }
 );
