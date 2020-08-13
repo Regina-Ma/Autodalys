@@ -41,6 +41,14 @@ const partSchema = new Schema({
     },
   }),
 
+  // detalės gamintojo kodų masyvas
+  codes: [
+    {
+      type: String,
+      required: true,
+    },
+  ],
+
   // automobilis, iš kurio paimta detalė
   car: {
     // jeigu detalė yra iš pardavėjo įvesto ardomo automobilio - to automobilio ID
