@@ -7,6 +7,7 @@ const carSchema = new Schema({
   model: {
     modelId: {
       type: Schema.Types.ObjectId,
+      ref: "Model",
       required: true,
     },
     modelName: {
@@ -21,6 +22,7 @@ const carSchema = new Schema({
   engine: {
     engineId: {
       type: Schema.Types.ObjectId,
+      ref: "Engine",
       required: false,
     },
     engineFuel: {
