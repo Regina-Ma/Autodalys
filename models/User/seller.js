@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const addressSchema = require("./contacts");
+const addressModel = require("./contacts");
 
 const Schema = mongoose.Schema;
 
@@ -53,7 +53,7 @@ const sellerSchema = new Schema({
     type: String,
     required: true,
   },
-  address: addressSchema,
+  address: addressModel,
   logoURL: {
     type: String,
     required: true,

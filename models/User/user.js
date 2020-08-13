@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const addressSchema = require("./contacts");
-const personContactsSchema = require("./contacts");
-const companyContactsSchema = require("./contacts");
+const addressModel = require("./contacts");
+const personContactsModel = require("./contacts");
+const companyContactsModel = require("./contacts");
 const partSchema = require("./Car/part");
 
 const Schema = mongoose.Schema;
@@ -55,15 +55,15 @@ const userSchema = new Schema(
     contacts: [
       {
         personContacts: {
-          type: personContactsSchema,
+          type: companyContactsModel,
           required: () => this.legalEntity === "person",
         },
         companyContacts: {
-          type: companyContactsSchema,
+          type: personContactsModel,
           required: () => this.legalEntity === "company",
         },
         address: {
-          type: addressSchema,
+          type: addressModel,
           required: true,
         },
       },

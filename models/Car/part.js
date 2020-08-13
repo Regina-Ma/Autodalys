@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 const carSchema = require("./car");
 const powerSchema = require("./engine");
-const { Decimal128 } = require("bson");
 
 const Schema = mongoose.Schema;
 
+// kategorijos schema
 const categorySchema = new Schema({
   name: {
     type: String,
@@ -16,49 +16,72 @@ const categorySchema = new Schema({
   },
 });
 
+// detalės schema
 const partSchema = new Schema({
+  // detalės unikalus kodas (SKU)
   productCode: {
     type: String,
     required: true,
     unique: true,
   },
+
+  // detalės kategorija
   category: {
     type: categorySchema,
     required: true,
     unique: true,
   },
-  superCategory: categorySchema.add({
-    superCategory: {
+
+  // detalės subkategorija
+  subCategory: categorySchema.add({
+    subCategory: {
       type: categorySchema,
       required: true,
+      unique: true,
     },
   }),
+
+  // automobilis, iš kurio paimta detalė
   car: {
+    // jeigu detalė yra iš pardavėjo įvesto ardomo automobilio - to automobilio ID
+    // tokiu atveju likusieji laukai užpildomi iš to automobilio
     carId: {
       type: carSchema,
       required: false,
       unique: true,
     },
+
+    // automobilio markė
     make: {
       type: String,
       required: false,
     },
+
+    // automobilio modelis
     model: {
       type: String,
       required: false,
     },
+
+    // automobilio variklio modelio ID, jei žinomas
     engine: {
       type: Schema.Types.ObjectId,
       ref: "Engine",
     },
+
+    // automobilio variklio tūris (kubiniais centimetrais - cm3)
     engineCapacity: {
       type: Number,
       required: false,
     },
+
+    // automobilio variklio galingumas
     enginePower: {
       type: powerSchema,
       required: false,
     },
+
+    // automobilio kuro tipas
     fuel: {
       type: String,
       enum: [
@@ -74,20 +97,28 @@ const partSchema = new Schema({
       ],
       required: false,
     },
+
+    // automobilio pagaminimo metai
     carProductionYear: {
       type: String,
       required: false,
     },
+
+    // automobilio vairo padėtis
     steeringWheelPosition: {
       type: String,
       enum: ["left", "right"],
       required: false,
     },
+
+    // automobilio pavarų dėžės tipas
     transmission: {
       type: String,
       enum: ["manual", "automatic"],
       required: false,
     },
+
+    // automobilio kėbulo tipas
     bodyType: {
       type: String,
       enum: [
@@ -106,11 +137,15 @@ const partSchema = new Schema({
       ],
       required: false,
     },
+
+    // automobilio varomieji ratai
     drivingWheels: {
       type: String,
       enum: ["front", "rear", "all"],
       required: false,
     },
+
+    // automobilio kėbulo spalva
     carColor: {
       type: String,
       enum: [
@@ -130,10 +165,14 @@ const partSchema = new Schema({
       required: false,
     },
   },
+
+  // detalės pavadinimas
   name: {
     type: String,
     required: true,
   },
+
+  // detalės pozicija
   position: {
     type: String,
     enum: [
@@ -148,10 +187,14 @@ const partSchema = new Schema({
     ],
     required: false,
   },
+
+  // detalės aprašymas, kurį įveda pardavėjas
   description: {
     type: String,
     required: true,
   },
+
+  // detalės kaina be PVM, kuri paskaičiuojama iš pardavėjo įvestos kainos
   priceWithoutVAT: {
     type: Number,
     required: true,

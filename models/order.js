@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const partSchema = require("./Car/part");
-const buyerSchema = require("./User/buyer");
 
 const Schema = mongoose.Schema;
 
@@ -56,15 +55,15 @@ const orderSchema = new Schema({
   },
   deliverTo: {
     personContacts: {
-      type: personContactsSchema,
+      type: personContactsModel,
       required: () => this.legalEntity === "person",
     },
     companyContacts: {
-      type: companyContactsSchema,
+      type: companyContactsModel,
       required: () => this.legalEntity === "company",
     },
     address: {
-      type: addressSchema,
+      type: addressModel,
       required: true,
     },
   },
