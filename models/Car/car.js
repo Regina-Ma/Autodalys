@@ -90,7 +90,7 @@ const carSchema = new Schema({
   },
   drivingWheels: {
     type: String,
-    enum: ["front", "rear", "all"],
+    enum: ["front", "rear", "all", "four"],
     required: false,
   },
   photoUrls: [
