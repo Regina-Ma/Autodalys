@@ -81,7 +81,7 @@ const partSchema = new Schema({
       required: false,
     },
 
-    // automobilio kuro tipas
+    // automobilio kuro tipas, pasirenkamas iš sąrašo
     fuel: {
       type: String,
       enum: [
@@ -104,21 +104,21 @@ const partSchema = new Schema({
       required: false,
     },
 
-    // automobilio vairo padėtis
+    // automobilio vairo padėtis, pasirenkama iš sąrašo
     steeringWheelPosition: {
       type: String,
       enum: ["left", "right"],
       required: false,
     },
 
-    // automobilio pavarų dėžės tipas
+    // automobilio pavarų dėžės tipas, pasirenkamas iš sąrašo
     transmission: {
       type: String,
       enum: ["manual", "automatic"],
       required: false,
     },
 
-    // automobilio kėbulo tipas
+    // automobilio kėbulo tipas, pasirenkamas iš sąrašo
     bodyType: {
       type: String,
       enum: [
@@ -138,14 +138,14 @@ const partSchema = new Schema({
       required: false,
     },
 
-    // automobilio varomieji ratai
+    // automobilio varomieji ratai, pasirenkama iš sąrašo
     drivingWheels: {
       type: String,
       enum: ["front", "rear", "all"],
       required: false,
     },
 
-    // automobilio kėbulo spalva
+    // automobilio kėbulo spalva, pasirenkama iš sąrašo
     carColor: {
       type: String,
       enum: [
@@ -172,7 +172,7 @@ const partSchema = new Schema({
     required: true,
   },
 
-  // detalės pozicija
+  // detalės pozicija, pasirenkama iš sąrašo
   position: {
     type: String,
     enum: [
@@ -202,40 +202,57 @@ const partSchema = new Schema({
       return this.price / 1.21;
     },
   },
+
+  // detalės kaina, kurią įveda pardavėjas
   price: {
     type: Number,
     required: true,
   },
+
+  // detalės nuotraukų, kurias įkelia pardavėjas, nuorodų masyvas
   photoUrls: [
     {
       type: String,
       required: false,
     },
   ],
+
+  // detalės būklė, pasirenkama iš sąrašo
   condition: {
     type: String,
     enum: ["new", "used", "refurbished"],
     required: true,
   },
+
+  // detalės prieinamumo pirkėjui tipas, pasirenkamas iš sąrašo
   status: {
     type: String,
-    enum: ["available", "reserved", "sold"],
+    enum: ["unavailable", "available", "reserved", "sold"],
     required: true,
   },
+
+  // detalės matmenų objektas
   dimensions: {
+    // detalės plotis
     width: {
       type: Number,
       required: true,
     },
+
+    // detalės ilgis
     length: {
       type: Number,
       required: true,
     },
+
+    // detalės aukštis
     height: {
       type: Number,
       required: true,
     },
   },
+
+  // detalės svoris
   weight: {
     type: Number,
     required: true,
