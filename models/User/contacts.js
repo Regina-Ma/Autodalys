@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const addressModel = mongoose.model(
+const Address = mongoose.model(
   "Address",
   new Schema({
     address: {

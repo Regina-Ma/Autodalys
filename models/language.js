@@ -3,29 +3,31 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const languageSchema = new Schema({
-  pages: [
-    {
-      url: {
-        type: String,
-        required: true,
-      },
-      pageTitle: {
-        type: String,
-        required: true,
-      },
-      pageDescription: {
-        type: String,
-        required: true,
-        max: 160,
-      },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
-        },
-      ],
+  languageName: {
+    type: String,
+    required: true,
+  },
+  homePage: {
+    url: {
+      type: String,
+      required: true,
     },
-  ],
+    pageTitle: {
+      type: String,
+      required: true,
+    },
+    pageDescription: {
+      type: String,
+      required: true,
+      max: 160,
+    },
+    pageFields: [
+      {
+        type: Map,
+        of: String,
+      },
+    ],
+  },
   carEnums: [
     {
       fuelType: [
