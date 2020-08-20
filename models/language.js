@@ -30,10 +30,6 @@ const languageSchema = new Schema({
     ],
   },
   registrationTypePage: {
-    url: {
-      type: String,
-      required: true,
-    },
     pageTitle: {
       type: String,
       required: true,
