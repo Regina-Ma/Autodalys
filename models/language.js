@@ -3,6 +3,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const languageSchema = new Schema({
+  otherLanguages: [
+    {
+      type: String,
+      required: true,
+    },
+  ],
   languageName: {
     type: String,
     required: true,
