@@ -6,6 +6,7 @@ const languageSchema = new Schema({
   otherLanguages: [
     {
       type: String,
+      enum: ["lt", "en", "ru"],
       required: true,
     },
   ],
