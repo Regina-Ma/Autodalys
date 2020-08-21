@@ -7,7 +7,7 @@ const languageSchema = new Schema({
     type: String,
     required: true,
   },
-  // front pages
+  // frontiniai puslapiai
   landingPage: {
     url: {
       type: String,
@@ -424,7 +424,7 @@ const languageSchema = new Schema({
       },
     ],
   },
-  // admin panel pages
+  // vartotojų panelės puslapiai
   profileSettingsBuyerPage: {
     url: {
       type: String,
@@ -509,254 +509,124 @@ const languageSchema = new Schema({
       },
     ],
   },
-  carEnums: [
-    {
-      fuelType: [
-        {
-          diesel: {
-            type: String,
-            required: true,
-          },
-          gasoline: {
-            type: String,
-            required: true,
-          },
-          gasoline_gas: {
-            type: String,
-            required: true,
-          },
-          gasoline_electricity: {
-            type: String,
-            required: true,
-          },
-          electricity: {
-            type: String,
-            required: true,
-          },
-          diesel_electricity: {
-            type: String,
-            required: true,
-          },
-          diesel_gas: {
-            type: String,
-            required: true,
-          },
-          bioethanol: {
-            type: String,
-            required: true,
-          },
-          other: {
-            type: String,
-            required: true,
-          },
-        },
-      ],
-      color: [
-        {
-          black: {
-            type: String,
-            required: true,
-          },
-          grey: {
-            type: String,
-            required: true,
-          },
-          white: {
-            type: String,
-            required: true,
-          },
-          violet: {
-            type: String,
-            required: true,
-          },
-          blue: {
-            type: String,
-            required: true,
-          },
-          green: {
-            type: String,
-            required: true,
-          },
-          yellow: {
-            type: String,
-            required: true,
-          },
-          orange: {
-            type: String,
-            required: true,
-          },
-          red: {
-            type: String,
-            required: true,
-          },
-          brown: {
-            type: String,
-            required: true,
-          },
-          mixed: {
-            type: String,
-            required: true,
-          },
-          other: {
-            type: String,
-            required: true,
-          },
-        },
-      ],
-      steeringWheelPosition: [
-        {
-          left: {
-            type: String,
-            required: true,
-          },
-          right: {
-            type: String,
-            required: true,
-          },
-        },
-      ],
-      transmission: [
-        {
-          manual: {
-            type: String,
-            required: true,
-          },
-          automatic: {
-            type: String,
-            required: true,
-          },
-        },
-      ],
-      bodyType: [
-        {
-          other: {
-            type: String,
-            required: true,
-          },
-          sedan: {
-            type: String,
-            required: true,
-          },
-          hatchback: {
-            type: String,
-            required: true,
-          },
-          caravan: {
-            type: String,
-            required: true,
-          },
-          minivan: {
-            type: String,
-            required: true,
-          },
-          suv: {
-            type: String,
-            required: true,
-          },
-          coupe: {
-            type: String,
-            required: true,
-          },
-          commercial: {
-            type: String,
-            required: true,
-          },
-          cabriolet: {
-            type: String,
-            required: true,
-          },
-          roadster: {
-            type: String,
-            required: true,
-          },
-          limousine: {
-            type: String,
-            required: true,
-          },
-          pickup: {
-            type: String,
-            required: true,
-          },
-        },
-      ],
-      drivingWheels: [
-        {
-          front: {
-            type: String,
-            required: true,
-          },
-          rear: {
-            type: String,
-            required: true,
-          },
-          all: {
-            type: String,
-            required: true,
-          },
-          four: {
-            type: String,
-            required: true,
-          },
-        },
-      ],
+
+  // dar reikia papildyti
+
+  // el. laiškų šablonai
+  verifyUserEmailTemplate: {
+    senderEmail: {
+      type: String,
+      lowercase: true,
+      required: true,
+      match: [/\S+@\S+\.\S+/, "is invalid"],
     },
-  ],
-  partEnums: [
-    {
-      condition: [
-        {
-          new: {
-            type: String,
-            required: true,
-          },
-          used: {
-            type: String,
-            required: true,
-          },
-          refurbished: {
-            type: String,
-            required: true,
-          },
-        },
-      ],
-      position: [
-        {
-          front: {
-            type: String,
-            required: true,
-          },
-          rear: {
-            type: String,
-            required: true,
-          },
-          left: {
-            type: String,
-            required: true,
-          },
-          right: {
-            type: String,
-            required: true,
-          },
-          front_left: {
-            type: String,
-            required: true,
-          },
-          front_right: {
-            type: String,
-            required: true,
-          },
-          rear_left: {
-            type: String,
-            required: true,
-          },
-          rear_right: {
-            type: String,
-            required: true,
-          },
-        },
-      ],
+    sanderName: {
+      type: String,
+      required: true,
     },
-  ],
+    subject: {
+      type: String,
+      required: true,
+    },
+    emailBody: {
+      type: String,
+      required: true,
+    },
+  },
+  resetPasswordTemplate: {
+    senderEmail: {
+      type: String,
+      lowercase: true,
+      required: true,
+      match: [/\S+@\S+\.\S+/, "is invalid"],
+    },
+    sanderName: {
+      type: String,
+      required: true,
+    },
+    subject: {
+      type: String,
+      required: true,
+    },
+    emailBody: {
+      type: String,
+      required: true,
+    },
+  },
+  // detalės kategorijos, subkategorijos ir pavadinimai
+  partCategorization: {
+    partCategories: [
+      {
+        type: Map,
+        of: String,
+      },
+    ],
+    partSubcategories: [
+      {
+        type: Map,
+        of: String,
+      },
+    ],
+    partNames: [
+      {
+        type: Map,
+        of: String,
+      },
+    ],
+  },
+  // filtrų reikšmės
+  carEnums: {
+    fuelType: [
+      {
+        type: Map,
+        of: String,
+      },
+    ],
+    color: [
+      {
+        type: Map,
+        of: String,
+      },
+    ],
+    steeringWheelPosition: [
+      {
+        type: Map,
+        of: String,
+      },
+    ],
+    transmission: [
+      {
+        type: Map,
+        of: String,
+      },
+    ],
+    bodyType: [
+      {
+        type: Map,
+        of: String,
+      },
+    ],
+    drivingWheels: [
+      {
+        type: Map,
+        of: String,
+      },
+    ],
+  },
+  partEnums: {
+    condition: [
+      {
+        type: Map,
+        of: String,
+      },
+    ],
+    position: [
+      {
+        type: Map,
+        of: String,
+      },
+    ],
+  },
 });
 
 module.exports = mongoose.model("Language", languageSchema);

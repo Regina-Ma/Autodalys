@@ -18,7 +18,7 @@ const categorySchema = new Schema({
 
 // detalės schema
 const partSchema = new Schema({
-  // detalės unikalus kodas (SKU)
+  // detalės unikalus produkto kodas, matomas ir svetainės lankytojams
   productCode: {
     type: String,
     required: true,
@@ -33,15 +33,27 @@ const partSchema = new Schema({
   },
 
   // detalės subkategorija
-  subCategory: categorySchema.add({
-    subCategory: {
-      type: categorySchema,
-      required: true,
-      unique: true,
+  subCategory: categorySchema.add([
+    {
+      subCategory: {
+        type: categorySchema,
+        required: true,
+        unique: true,
+      },
     },
-  }),
+  ]),
 
-  // detalės gamintojo kodų masyvas
+  // detalės pavadinimas (sub-subkategorija)
+  partName: subCategory.add([
+    {
+      partName: {
+        type: String,
+        required: true,
+        unique: true,
+      },
+    },
+  ]),
+  // detalių kodai
   codes: [
     {
       type: String,
@@ -49,7 +61,7 @@ const partSchema = new Schema({
     },
   ],
 
-  // automobilis, iš kurio paimta detalė
+  // ardomas automobilis, iš kurio paimta detalė
   car: {
     // jeigu detalė yra iš pardavėjo įvesto ardomo automobilio - to automobilio ID
     // tokiu atveju likusieji laukai užpildomi iš to automobilio
