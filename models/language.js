@@ -36,7 +36,7 @@ const languageSchema = new Schema({
       },
     ],
   },
-  registrationTypePage: {
+  registrationTypeWindow: {
     pageTitle: {
       type: String,
       required: true,
@@ -441,11 +441,6 @@ const languageSchema = new Schema({
       type: String,
       required: true,
     },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
     pageFields: [
       {
         type: Map,
@@ -461,11 +456,6 @@ const languageSchema = new Schema({
     pageTitle: {
       type: String,
       required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
     },
     pageFields: [
       {
@@ -483,11 +473,6 @@ const languageSchema = new Schema({
       type: String,
       required: true,
     },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
     pageFields: [
       {
         type: Map,
@@ -503,11 +488,6 @@ const languageSchema = new Schema({
     pageTitle: {
       type: String,
       required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
     },
     pageFields: [
       {

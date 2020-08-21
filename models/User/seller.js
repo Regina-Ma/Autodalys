@@ -115,7 +115,7 @@ const sellerSchema = new Schema({
   ratingsCount: {
     type: Number,
     required: true,
-    default: this.totalRating / this.ratings.l,
+    default: this.totalRating / this.ratings.length,
   },
 });
 
