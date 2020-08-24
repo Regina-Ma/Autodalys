@@ -2,618 +2,621 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const languageSchema = new Schema({
-  otherLanguages: [
-    {
-      type: String,
-      enum: ["lt", "en", "ru"],
-      required: true,
-    },
-  ],
-  languageName: {
-    type: String,
-    required: true,
-  },
-  // frontiniai puslapiai
-  landingPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
+const languageSchema = new Schema(
+  {
+    otherLanguages: [
       {
-        type: Map,
-        of: String,
+        type: String,
+        enum: ["lt", "en", "ru"],
+        required: true,
       },
     ],
-  },
-  registrationTypeWindow: {
-    pageTitle: {
+    languageName: {
       type: String,
       required: true,
     },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+    // frontiniai puslapiai
+    landingPage: {
+      url: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  registerAsBuyerPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageTitle: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  registerAsSellerPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
       },
-    ],
-  },
-  loginPage: {
-    url: {
-      type: String,
-      required: true,
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
     },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+    registrationTypeWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  contactsPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
       },
-    ],
-  },
-  aboutUsPage: {
-    url: {
-      type: String,
-      required: true,
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
     },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+    registerAsBuyerPage: {
+      url: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  becomeSellerPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageTitle: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  paymentsPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
       },
-    ],
-  },
-  deliveryPage: {
-    url: {
-      type: String,
-      required: true,
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
     },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+    registerAsSellerPage: {
+      url: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  returnsPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageTitle: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  faqPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
       },
-    ],
-  },
-  searchPage: {
-    url: {
-      type: String,
-      required: true,
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
     },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+    loginPage: {
+      url: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  advertisementPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageTitle: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  singleCarAdvertisementPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
       },
-    ],
-  },
-  privacyPolicyPage: {
-    url: {
-      type: String,
-      required: true,
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
     },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+    contactsPage: {
+      url: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  pageRulesPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageTitle: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  savedPartsPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
       },
-    ],
-  },
-  cartPage: {
-    url: {
-      type: String,
-      required: true,
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
     },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+    aboutUsPage: {
+      url: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  buyingProcessPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageDescription: {
-      type: String,
-      required: true,
-      max: 160,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageTitle: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  // vartotojų panelės puslapiai
-  profileSettingsBuyerPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
       },
-    ],
-  },
-  registeredBecomeSellerPage: {
-    url: {
-      type: String,
-      required: true,
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
     },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+    becomeSellerPage: {
+      url: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  boughtOrdersPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageTitle: {
+        type: String,
+        required: true,
       },
-    ],
-  },
-  returnPartsPage: {
-    url: {
-      type: String,
-      required: true,
-    },
-    pageTitle: {
-      type: String,
-      required: true,
-    },
-    pageFields: [
-      {
-        type: Map,
-        of: String,
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
       },
-    ],
-  },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    paymentsPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    deliveryPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    returnsPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    faqPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    searchPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    advertisementPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    singleCarAdvertisementPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    privacyPolicyPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    pageRulesPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    savedPartsPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    cartPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    buyingProcessPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    // vartotojų panelės puslapiai
+    profileSettingsBuyerPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    registeredBecomeSellerPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    boughtOrdersPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    returnPartsPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
 
-  // dar reikia papildyti
+    // dar reikia papildyti
 
-  // el. laiškų šablonai
-  verifyUserEmailTemplate: {
-    senderEmail: {
-      type: String,
-      lowercase: true,
-      required: true,
-      match: [/\S+@\S+\.\S+/, "is invalid"],
+    // el. laiškų šablonai
+    verifyUserEmailTemplate: {
+      senderEmail: {
+        type: String,
+        lowercase: true,
+        required: true,
+        match: [/\S+@\S+\.\S+/, "is invalid"],
+      },
+      sanderName: {
+        type: String,
+        required: true,
+      },
+      subject: {
+        type: String,
+        required: true,
+      },
+      emailBody: {
+        type: String,
+        required: true,
+      },
     },
-    sanderName: {
-      type: String,
-      required: true,
+    resetPasswordTemplate: {
+      senderEmail: {
+        type: String,
+        lowercase: true,
+        required: true,
+        match: [/\S+@\S+\.\S+/, "is invalid"],
+      },
+      sanderName: {
+        type: String,
+        required: true,
+      },
+      subject: {
+        type: String,
+        required: true,
+      },
+      emailBody: {
+        type: String,
+        required: true,
+      },
     },
-    subject: {
-      type: String,
-      required: true,
+    // detalės kategorijos, subkategorijos ir pavadinimai
+    partCategorization: {
+      partCategories: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+      partSubcategories: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+      partNames: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
     },
-    emailBody: {
-      type: String,
-      required: true,
+    // filtrų reikšmės
+    carEnums: {
+      fuelType: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+      color: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+      steeringWheelPosition: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+      transmission: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+      bodyType: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+      drivingWheels: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+    },
+    partEnums: {
+      condition: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
+      position: [
+        {
+          type: Map,
+          of: String,
+        },
+      ],
     },
   },
-  resetPasswordTemplate: {
-    senderEmail: {
-      type: String,
-      lowercase: true,
-      required: true,
-      match: [/\S+@\S+\.\S+/, "is invalid"],
-    },
-    sanderName: {
-      type: String,
-      required: true,
-    },
-    subject: {
-      type: String,
-      required: true,
-    },
-    emailBody: {
-      type: String,
-      required: true,
-    },
-  },
-  // detalės kategorijos, subkategorijos ir pavadinimai
-  partCategorization: {
-    partCategories: [
-      {
-        type: Map,
-        of: String,
-      },
-    ],
-    partSubcategories: [
-      {
-        type: Map,
-        of: String,
-      },
-    ],
-    partNames: [
-      {
-        type: Map,
-        of: String,
-      },
-    ],
-  },
-  // filtrų reikšmės
-  carEnums: {
-    fuelType: [
-      {
-        type: Map,
-        of: String,
-      },
-    ],
-    color: [
-      {
-        type: Map,
-        of: String,
-      },
-    ],
-    steeringWheelPosition: [
-      {
-        type: Map,
-        of: String,
-      },
-    ],
-    transmission: [
-      {
-        type: Map,
-        of: String,
-      },
-    ],
-    bodyType: [
-      {
-        type: Map,
-        of: String,
-      },
-    ],
-    drivingWheels: [
-      {
-        type: Map,
-        of: String,
-      },
-    ],
-  },
-  partEnums: {
-    condition: [
-      {
-        type: Map,
-        of: String,
-      },
-    ],
-    position: [
-      {
-        type: Map,
-        of: String,
-      },
-    ],
-  },
-});
+  { timestamps: true }
+);
 
 module.exports = mongoose.model("Language", languageSchema);
