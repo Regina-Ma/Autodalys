@@ -1,7 +1,4 @@
 const mongoose = require("mongoose");
-const addressModel = require("./contacts");
-const personContactsModel = require("./contacts");
-const companyContactsModel = require("./contacts");
 const partSchema = require("./Car/part");
 
 const Schema = mongoose.Schema;
@@ -55,15 +52,77 @@ const userSchema = new Schema(
     contacts: [
       {
         personContacts: {
-          type: personContactsModel,
+          name: {
+            type: String,
+            required: true,
+          },
+          surname: {
+            type: String,
+            required: true,
+          },
+          phone: {
+            type: String,
+            required: true,
+          },
+          isVATPayer: {
+            type: Boolean,
+            required: true,
+          },
+          VAT: {
+            type: String,
+            required: () => this.isVATPayer,
+          },
           required: () => this.legalEntity === "person",
         },
         companyContacts: {
-          type: companyContactsModel,
+          sellerId: {
+            type: Schema.Types.ObjectId,
+            ref: "Seller",
+            required: false,
+          },
+          companyName: {
+            type: String,
+            required: true,
+          },
+          companyCode: {
+            type: String,
+            required: true,
+          },
+          phone: {
+            type: String,
+            required: true,
+          },
+          isVATPayer: {
+            type: Boolean,
+            required: true,
+          },
+          VAT: {
+            type: String,
+            required: () => this.isVATPayer,
+          },
           required: () => this.legalEntity === "company",
         },
         address: {
-          type: addressModel,
+          address: {
+            type: String,
+            required: true,
+          },
+          city: {
+            type: String,
+            required: true,
+          },
+          zipCode: {
+            type: String,
+            required: true,
+          },
+          region: {
+            type: String,
+            required: true,
+          },
+          country: {
+            type: String,
+            required: true,
+          },
           required: true,
         },
       },

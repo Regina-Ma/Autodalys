@@ -85,6 +85,6 @@ const companyContactsModel = Address.discriminator(
   })
 );
 
-module.exports = mongoose.model("Address", addressModel);
-module.exports = mongoose.model("Contacts", personContactsModel);
-module.exports = mongoose.model("Contacts", companyContactsModel);
+module.exports = mongoose.model("Address", Address);
+module.exports = mongoose.model("Person Contacts", personContactsModel);
+module.exports = mongoose.model("Company Contacts", companyContactsModel);
