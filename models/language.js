@@ -114,6 +114,20 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
+        socialUrls: {
+          youtubeUrl: {
+            type: String,
+            required: true,
+          },
+          instagramUrl: {
+            type: String,
+            required: true,
+          },
+          facebookUrl: {
+            type: String,
+            required: true,
+          },
+        },
       },
     },
     sideNavigationAdmin: {
@@ -279,12 +293,140 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        mainSearchPlaceholder: {
+          type: String,
+          required: true,
         },
-      ],
+        mainSearchButton: {
+          type: String,
+          required: true,
+        },
+        headerText: {
+          type: String,
+          required: true,
+        },
+        searchCar: {
+          type: String,
+          required: true,
+        },
+        searchModel: {
+          type: String,
+          required: true,
+        },
+        searchEngine: {
+          type: String,
+          required: true,
+        },
+        searchDrivingWheels: {
+          type: String,
+          required: true,
+        },
+        searchTransmission: {
+          type: String,
+          required: true,
+        },
+        searchFuel: {
+          type: String,
+          required: true,
+        },
+        searchColor: {
+          type: String,
+          required: true,
+        },
+        searchYear: {
+          type: String,
+          required: true,
+        },
+        searchEngineCapacity: {
+          type: String,
+          required: true,
+        },
+        searchEnginePower: {
+          type: String,
+          required: true,
+        },
+        expandSearchFields: {
+          type: String,
+          required: true,
+        },
+        searchByFieldsButton: {
+          type: String,
+          required: true,
+        },
+        registerBuyerText: {
+          type: String,
+          required: true,
+        },
+        registerBuyerButton: {
+          type: String,
+          required: true,
+        },
+        popularMakes: {
+          type: String,
+          required: true,
+        },
+        popularCategories: {
+          type: String,
+          required: true,
+        },
+        newestAdvertisements: {
+          type: String,
+          required: true,
+        },
+        queryFormName: {
+          type: String,
+          required: true,
+        },
+        selectMake: {
+          type: String,
+          required: true,
+        },
+        selectModel: {
+          type: String,
+          required: true,
+        },
+        enterPartCodePlaceholder: {
+          type: String,
+          required: true,
+        },
+        enterNamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        enterPhonePlaceholder: {
+          type: String,
+          required: true,
+        },
+        enterEmailPlaceholder: {
+          type: String,
+          required: true,
+        },
+        enterCommentsPlaceholder: {
+          type: String,
+          required: true,
+        },
+        photosName: {
+          type: String,
+          required: true,
+        },
+        formCommentsText: {
+          type: String,
+          required: true,
+        },
+        agreeRules: {
+          type: String,
+          required: true,
+        },
+        aboutUsSectionName: {
+          type: String,
+          required: true,
+        },
+        aboutSectionText: {
+          type: String,
+          required: true,
+        },
+      },
     },
     registrationTypeWindow: {
       pageTitle: {
@@ -296,12 +438,28 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        register: {
+          type: String,
+          required: true,
         },
-      ],
+        registerBuyerText: {
+          type: String,
+          required: true,
+        },
+        registerSellerText: {
+          type: String,
+          required: true,
+        },
+        registerBuyerButton: {
+          type: String,
+          required: true,
+        },
+        registerSellerButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     registerAsBuyerPage: {
       url: {
@@ -317,12 +475,36 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        emailTitle: {
+          type: String,
+          required: true,
         },
-      ],
+        emailPlaceholder: {
+          type: String,
+          required: true,
+        },
+        passwordTitle: {
+          type: String,
+          required: true,
+        },
+        passwordPlaceholder: {
+          type: String,
+          required: true,
+        },
+        agreePageRules: {
+          type: String,
+          required: true,
+        },
+        agreePrivacyPolicy: {
+          type: String,
+          required: true,
+        },
+        registerButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     registerAsSellerPage: {
       url: {
@@ -338,12 +520,111 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        pageDataText: {
+          type: String,
+          required: true,
         },
-      ],
+        expandPageText: {
+          type: String,
+          required: true,
+        },
+        contactsFormTitle: {
+          type: String,
+          required: true,
+        },
+        email: {
+          type: String,
+          required: true,
+        },
+        emailPlaceholder: {
+          type: String,
+          required: true,
+        },
+        password: {
+          type: String,
+          required: true,
+        },
+        passwordPlaceholder: {
+          type: String,
+          required: true,
+        },
+        isPerson: {
+          type: String,
+          required: true,
+        },
+        name: {
+          type: String,
+          required: true,
+        },
+        surname: {
+          type: String,
+          required: true,
+        },
+        phone: {
+          type: String,
+          required: true,
+        },
+        personCommerceCode: {
+          type: String,
+          required: true,
+        },
+        isVATPayer: {
+          type: String,
+          required: true,
+        },
+        VAT: {
+          type: String,
+          required: true,
+        },
+        isCompany: {
+          type: String,
+          required: true,
+        },
+        companyName: {
+          type: String,
+          required: true,
+        },
+        companyCode: {
+          type: String,
+          required: true,
+        },
+        companyRepresentativeName: {
+          type: String,
+          required: true,
+        },
+        companyRepresentativeSurname: {
+          type: String,
+          required: true,
+        },
+        companyPhone: {
+          type: String,
+          required: true,
+        },
+        companyEmail: {
+          type: String,
+          required: true,
+        },
+        billingFormTitle: {
+          type: String,
+          required: true,
+        },
+
+        // reikia papildyti, kai bus aiški mangopay integracija ir KYC procedūra
+
+        agreePageRules: {
+          type: String,
+          required: true,
+        },
+        agreePrivacyPolicy: {
+          type: String,
+          required: true,
+        },
+        registerButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     loginPage: {
       url: {
@@ -359,12 +640,45 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        login: {
+          type: String,
+          required: true,
         },
-      ],
+        remindPasswordLink: {
+          type: String,
+          required: true,
+        },
+        registerText: {
+          type: String,
+          required: true,
+        },
+        registerLink: {
+          type: String,
+          required: true,
+        },
+        emailTitle: {
+          type: String,
+          required: true,
+        },
+        emailPlaceholder: {
+          type: String,
+          required: true,
+        },
+        passwordTitle: {
+          type: String,
+          required: true,
+        },
+        passwordPlaceholder: {
+          type: String,
+          required: true,
+        },
+
+        loginButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     contactsPage: {
       url: {
