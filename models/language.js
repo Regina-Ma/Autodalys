@@ -1682,12 +1682,48 @@ const languageSchema = new Schema(
         type: String,
         required: true,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        emailText: {
+          type: String,
+          required: true,
         },
-      ],
+        emailPlaceholder: {
+          type: String,
+          required: true,
+        },
+        oldPasswordText: {
+          type: String,
+          required: true,
+        },
+        oldPasswordPlaceholder: {
+          type: String,
+          required: true,
+        },
+        newPasswordText: {
+          type: String,
+          required: true,
+        },
+        newPasswordPlaceholder: {
+          type: String,
+          required: true,
+        },
+        changePasswordButton: {
+          type: String,
+          required: true,
+        },
+        myAddressesTitle: {
+          type: String,
+          required: true,
+        },
+        changeAddressButton: {
+          type: String,
+          required: true,
+        },
+        addAddressButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     registeredBecomeSellerPage: {
       url: {
@@ -1698,12 +1734,91 @@ const languageSchema = new Schema(
         type: String,
         required: true,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        mainData: {
+          type: String,
+          required: true,
         },
-      ],
+        expandTextLink: {
+          type: String,
+          required: true,
+        },
+        isPerson: {
+          type: String,
+          required: true,
+        },
+        name: {
+          type: String,
+          required: true,
+        },
+        surname: {
+          type: String,
+          required: true,
+        },
+        phone: {
+          type: String,
+          required: true,
+        },
+        personCommerceCode: {
+          type: String,
+          required: true,
+        },
+        isVATPayer: {
+          type: String,
+          required: true,
+        },
+        VAT: {
+          type: String,
+          required: true,
+        },
+        isCompany: {
+          type: String,
+          required: true,
+        },
+        companyName: {
+          type: String,
+          required: true,
+        },
+        companyCode: {
+          type: String,
+          required: true,
+        },
+        companyRepresentativeName: {
+          type: String,
+          required: true,
+        },
+        companyRepresentativeSurname: {
+          type: String,
+          required: true,
+        },
+        companyPhone: {
+          type: String,
+          required: true,
+        },
+        companyEmail: {
+          type: String,
+          required: true,
+        },
+        billingFormTitle: {
+          type: String,
+          required: true,
+        },
+
+        // reikia papildyti, kai bus aiški mangopay integracija ir KYC procedūra
+
+        agreePageRules: {
+          type: String,
+          required: true,
+        },
+        agreePrivacyPolicy: {
+          type: String,
+          required: true,
+        },
+        registerButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     boughtOrdersPage: {
       url: {
@@ -1714,12 +1829,64 @@ const languageSchema = new Schema(
         type: String,
         required: true,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        dateFromText: {
+          type: String,
+          required: true,
         },
-      ],
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        selectStatusText: {
+          type: String,
+          required: true,
+        },
+        searchPlaceholder: {
+          type: String,
+          required: true,
+        },
+        searchButton: {
+          type: String,
+          required: true,
+        },
+        sortText: {
+          type: String,
+          required: true,
+        },
+        orderNumberText: {
+          type: String,
+          required: true,
+        },
+        orderDateText: {
+          type: String,
+          required: true,
+        },
+        sellerText: {
+          type: String,
+          required: true,
+        },
+        partsTitle: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+        deliveryInfoTitle: {
+          type: String,
+          required: true,
+        },
+        deliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        commentText: {
+          type: String,
+          required: true,
+        },
+      },
     },
     returnPartsPage: {
       url: {
