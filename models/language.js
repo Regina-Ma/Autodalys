@@ -15,7 +15,256 @@ const languageSchema = new Schema(
       type: String,
       required: true,
     },
-    // frontiniai puslapiai
+    // -------- navigacijos komponentai --------
+    topNavigation: {
+      pageFields: {
+        savedParts: {
+          type: String,
+          required: true,
+        },
+        contacts: {
+          type: String,
+          required: true,
+        },
+        login: {
+          type: String,
+          required: true,
+        },
+        register: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    sideNavigationFront: {
+      pageFields: {
+        delivery: {
+          type: String,
+          required: true,
+        },
+        returns: {
+          type: String,
+          required: true,
+        },
+        payments: {
+          type: String,
+          required: true,
+        },
+        pageRules: {
+          type: String,
+          required: true,
+        },
+        privacyPolicy: {
+          type: String,
+          required: true,
+        },
+        aboutUs: {
+          type: String,
+          required: true,
+        },
+        becomeSeller: {
+          type: String,
+          required: true,
+        },
+        contacts: {
+          type: String,
+          required: true,
+        },
+        faq: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    footer: {
+      pageFields: {
+        delivery: {
+          type: String,
+          required: true,
+        },
+        returns: {
+          type: String,
+          required: true,
+        },
+        payments: {
+          type: String,
+          required: true,
+        },
+        contacts: {
+          type: String,
+          required: true,
+        },
+        aboutUs: {
+          type: String,
+          required: true,
+        },
+        faq: {
+          type: String,
+          required: true,
+        },
+        becomeSeller: {
+          type: String,
+          required: true,
+        },
+        privacyPolicy: {
+          type: String,
+          required: true,
+        },
+        pageRules: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    sideNavigationAdmin: {
+      pageFields: {
+        sellerNavigation: {
+          cars: {
+            type: String,
+            required: true,
+          },
+          parts: {
+            type: String,
+            required: true,
+          },
+          orders: {
+            type: String,
+            required: true,
+          },
+          invoices: {
+            type: String,
+            required: true,
+          },
+          queries: {
+            type: String,
+            required: true,
+          },
+          statistics: {
+            type: String,
+            required: true,
+          },
+          infoirmation: {
+            type: String,
+            required: true,
+          },
+          import: {
+            type: String,
+            required: true,
+          },
+          export: {
+            type: String,
+            required: true,
+          },
+          profileSettings: {
+            type: String,
+            required: true,
+          },
+        },
+        buyerNavigation: {
+          savedParts: {
+            type: String,
+            required: true,
+          },
+          cart: {
+            type: String,
+            required: true,
+          },
+          ordersBought: {
+            type: String,
+            required: true,
+          },
+          becomeSeller: {
+            type: String,
+            required: true,
+          },
+        },
+        adminNavigation: {
+          statistics: {
+            users: {
+              type: String,
+              required: true,
+            },
+            advertisements: {
+              type: String,
+              required: true,
+            },
+            orders: {
+              type: String,
+              required: true,
+            },
+            queries: {
+              type: String,
+              required: true,
+            },
+            income: {
+              type: String,
+              required: true,
+            },
+          },
+          users: {
+            settings: {
+              type: String,
+              required: true,
+            },
+            carts: {
+              type: String,
+              required: true,
+            },
+            cars: {
+              type: String,
+              required: true,
+            },
+            parts: {
+              type: String,
+              required: true,
+            },
+            orders: {
+              type: String,
+              required: true,
+            },
+            invoices: {
+              type: String,
+              required: true,
+            },
+            queries: {
+              type: String,
+              required: true,
+            },
+            importsExports: {
+              type: String,
+              required: true,
+            },
+          },
+          pageContent: {
+            settings: {
+              type: String,
+              required: true,
+            },
+            pages: {
+              type: String,
+              required: true,
+            },
+            cars: {
+              type: String,
+              required: true,
+            },
+            parts: {
+              type: String,
+              required: true,
+            },
+            filters: {
+              type: String,
+              required: true,
+            },
+            emails: {
+              type: String,
+              required: true,
+            },
+          },
+        },
+      },
+    },
+    // -------- frontiniai puslapiai --------
     landingPage: {
       url: {
         type: String,
@@ -131,12 +380,12 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        mainData: {
+          type: String,
+          required: true,
         },
-      ],
+      },
     },
     aboutUsPage: {
       url: {
@@ -152,12 +401,12 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        mainData: {
+          type: String,
+          required: true,
         },
-      ],
+      },
     },
     becomeSellerPage: {
       url: {
@@ -173,12 +422,12 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        mainData: {
+          type: String,
+          required: true,
         },
-      ],
+      },
     },
     paymentsPage: {
       url: {
@@ -194,12 +443,12 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        mainData: {
+          type: String,
+          required: true,
         },
-      ],
+      },
     },
     deliveryPage: {
       url: {
@@ -215,12 +464,12 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        mainData: {
+          type: String,
+          required: true,
         },
-      ],
+      },
     },
     returnsPage: {
       url: {
@@ -236,12 +485,24 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        mainData: {
+          type: String,
+          required: true,
         },
-      ],
+        fomrOrderNumber: {
+          type: String,
+          required: true,
+        },
+        formEmail: {
+          type: String,
+          required: true,
+        },
+        sendFormButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     faqPage: {
       url: {
@@ -257,12 +518,48 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        question1: {
+          type: String,
+          required: true,
         },
-      ],
+        answer1: {
+          type: String,
+          required: true,
+        },
+        question2: {
+          type: String,
+          required: true,
+        },
+        answer2: {
+          type: String,
+          required: true,
+        },
+        question3: {
+          type: String,
+          required: true,
+        },
+        answer3: {
+          type: String,
+          required: true,
+        },
+        question4: {
+          type: String,
+          required: true,
+        },
+        answer4: {
+          type: String,
+          required: true,
+        },
+        question5: {
+          type: String,
+          required: true,
+        },
+        answer5: {
+          type: String,
+          required: true,
+        },
+      },
     },
     searchPage: {
       url: {
@@ -341,12 +638,12 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        mainData: {
+          type: String,
+          required: true,
         },
-      ],
+      },
     },
     pageRulesPage: {
       url: {
@@ -362,12 +659,12 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        mainData: {
+          type: String,
+          required: true,
         },
-      ],
+      },
     },
     savedPartsPage: {
       url: {
@@ -432,7 +729,7 @@ const languageSchema = new Schema(
         },
       ],
     },
-    // vartotojų panelės puslapiai
+    // -------- vartotojų panelės puslapiai --------
     profileSettingsBuyerPage: {
       url: {
         type: String,
@@ -500,7 +797,7 @@ const languageSchema = new Schema(
 
     // dar reikia papildyti
 
-    // el. laiškų šablonai
+    // -------- el. laiškų šablonai --------
     verifyUserEmailTemplate: {
       senderEmail: {
         type: String,
@@ -541,7 +838,7 @@ const languageSchema = new Schema(
         required: true,
       },
     },
-    // detalės kategorijos, subkategorijos ir pavadinimai
+    // -------- detalės kategorijos, subkategorijos ir pavadinimai --------
     partCategorization: {
       partCategories: [
         {
@@ -562,7 +859,7 @@ const languageSchema = new Schema(
         },
       ],
     },
-    // filtrų reikšmės
+    // -------- filtrų reikšmės --------
     carEnums: {
       fuelType: [
         {
