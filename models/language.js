@@ -1882,7 +1882,31 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        commentText: {
+        deliveryCommentText: {
+          type: String,
+          required: true,
+        },
+        deliveryPriceText: {
+          type: String,
+          required: true,
+        },
+        totalPriceText: {
+          type: String,
+          required: true,
+        },
+        orderStatusText: {
+          type: String,
+          required: true,
+        },
+        getInvoiceLink: {
+          type: String,
+          required: true,
+        },
+        sellerRatingText: {
+          type: String,
+          required: true,
+        },
+        returnPartsButton: {
           type: String,
           required: true,
         },
@@ -1897,12 +1921,92 @@ const languageSchema = new Schema(
         type: String,
         required: true,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        orderNumberText: {
+          type: String,
+          required: true,
         },
-      ],
+        orderDateText: {
+          type: String,
+          required: true,
+        },
+        sellerText: {
+          type: String,
+          required: true,
+        },
+        partsTitle: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+        returnReason1: {
+          type: String,
+          required: true,
+        },
+        returnReason2: {
+          type: String,
+          required: true,
+        },
+        returnReason3: {
+          type: String,
+          required: true,
+        },
+        pickUpAddressText: {
+          type: String,
+          required: true,
+        },
+        moneyRefundTitle: {
+          type: String,
+          required: true,
+        },
+        moneyRefundName: {
+          type: String,
+          required: true,
+        },
+        moneyRefundIban: {
+          type: String,
+          required: true,
+        },
+        returnTypesTitle: {
+          type: String,
+          required: true,
+        },
+        returnType1: {
+          type: String,
+          required: true,
+        },
+        returnType2: {
+          type: String,
+          required: true,
+        },
+        returnCommentText: {
+          type: String,
+          required: true,
+        },
+        returnCommentPlaceholder: {
+          type: String,
+          required: true,
+        },
+        continueButton: {
+          type: String,
+          required: true,
+        },
+        successfulReturnRegistrationTitle: {
+          type: String,
+          required: true,
+        },
+        returnInstructionsData: {
+          type: String,
+          required: true,
+        },
+        printStickerLink: {
+          type: String,
+          required: true,
+        },
+      },
     },
 
     // dar reikia papildyti
