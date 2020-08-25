@@ -889,12 +889,124 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        fastSearchPlaceholder: {
+          type: String,
+          required: true,
         },
-      ],
+        filterText: {
+          type: String,
+          required: true,
+        },
+        filterFuel: {
+          type: String,
+          required: true,
+        },
+        filterBodyType: {
+          type: String,
+          required: true,
+        },
+        filterTransmission: {
+          type: String,
+          required: true,
+        },
+        filterDrivingWheels: {
+          type: String,
+          required: true,
+        },
+        filterSteeringWheelPosition: {
+          type: String,
+          required: true,
+        },
+        filterPartPosition: {
+          type: String,
+          required: true,
+        },
+        filterColor: {
+          type: String,
+          required: true,
+        },
+        filterYear: {
+          type: String,
+          required: true,
+        },
+        filterEngineCapacity: {
+          type: String,
+          required: true,
+        },
+        filterEnginePower: {
+          type: String,
+          required: true,
+        },
+        clearFilterText: {
+          type: String,
+          required: true,
+        },
+        filterButton: {
+          type: String,
+          required: true,
+        },
+        searchCar: {
+          type: String,
+          required: true,
+        },
+        searchModel: {
+          type: String,
+          required: true,
+        },
+        searchEngine: {
+          type: String,
+          required: true,
+        },
+        addSearchCarFields: {
+          type: String,
+          required: true,
+        },
+        sortText: {
+          type: String,
+          required: true,
+        },
+        sortingSelect: {
+          type: String,
+          required: true,
+        },
+        foundResultsText: {
+          type: String,
+          required: true,
+        },
+        previousPage: {
+          type: String,
+          required: true,
+        },
+        nextPage: {
+          type: String,
+          required: true,
+        },
+        partCodes: {
+          type: String,
+          required: true,
+        },
+        partCondition: {
+          type: String,
+          required: true,
+        },
+        partSellerRatings: {
+          type: String,
+          required: true,
+        },
+        partPrice: {
+          type: String,
+          required: true,
+        },
+        addToCart: {
+          type: String,
+          required: true,
+        },
+        buy: {
+          type: String,
+          required: true,
+        },
+      },
     },
     advertisementPage: {
       url: {
@@ -910,14 +1022,162 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        partSellerRatings: {
+          type: String,
+          required: true,
         },
-      ],
+        partSellerRatings: {
+          type: String,
+          required: true,
+        },
+        productCode: {
+          type: String,
+          required: true,
+        },
+        buyButton: {
+          type: String,
+          required: true,
+        },
+        partInfoTitle: {
+          type: String,
+          required: true,
+        },
+        partCondition: {
+          type: String,
+          required: true,
+        },
+        partPosition: {
+          type: String,
+          required: true,
+        },
+        partCodes: {
+          type: String,
+          required: true,
+        },
+        partDescription: {
+          type: String,
+          required: true,
+        },
+        carInfoTitle: {
+          type: String,
+          required: true,
+        },
+        make: {
+          type: String,
+          required: true,
+        },
+        model: {
+          type: String,
+          required: true,
+        },
+        productionYear: {
+          type: String,
+          required: true,
+        },
+        engine: {
+          type: String,
+          required: true,
+        },
+        bodyType: {
+          type: String,
+          required: true,
+        },
+        steeringWheelPosition: {
+          type: String,
+          required: true,
+        },
+        drivingWheels: {
+          type: String,
+          required: true,
+        },
+        transmission: {
+          type: String,
+          required: true,
+        },
+        color: {
+          type: String,
+          required: true,
+        },
+        mileage: {
+          type: String,
+          required: true,
+        },
+        fuelType: {
+          type: String,
+          required: true,
+        },
+        engineCapacity: {
+          type: String,
+          required: true,
+        },
+        enginePower: {
+          type: String,
+          required: true,
+        },
+        otherCarParts: {
+          type: String,
+          required: true,
+        },
+        dismantledCarPhotos: {
+          type: String,
+          required: true,
+        },
+        paymentText: {
+          type: String,
+          required: true,
+        },
+        returnsText: {
+          type: String,
+          required: true,
+        },
+        deliveryText: {
+          type: String,
+          required: true,
+        },
+        sellerTab: {
+          type: String,
+          required: true,
+        },
+        sellerInfo: {
+          type: String,
+          required: true,
+        },
+        sellerWorkingHours: {
+          type: String,
+          required: true,
+        },
+        sellerRating: {
+          type: String,
+          required: true,
+        },
+        sellerRatingCount: {
+          type: String,
+          required: true,
+        },
+        deliveryTab: {
+          type: String,
+          required: true,
+        },
+        deliveryTabData: {
+          type: String,
+          required: true,
+        },
+        buyingTab: {
+          type: String,
+          required: true,
+        },
+        buyingTabData: {
+          type: String,
+          required: true,
+        },
+        partSeoText: {
+          type: String,
+          required: true,
+        },
+      },
     },
-    singleCarAdvertisementPage: {
+    singleCarAdvertisementSide: {
       url: {
         type: String,
         required: true,
@@ -931,12 +1191,12 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        dismantledCarPhotosText: {
+          type: String,
+          required: true,
         },
-      ],
+      },
     },
     privacyPolicyPage: {
       url: {
@@ -1036,12 +1296,180 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        cartTab: {
+          type: String,
+          required: true,
         },
-      ],
+        loginTab: {
+          type: String,
+          required: true,
+        },
+        buyAsGuestText: {
+          type: String,
+          required: true,
+        },
+        buyAsGuestButton: {
+          type: String,
+          required: true,
+        },
+        continueAsGuestText: {
+          type: String,
+          required: true,
+        },
+        nameText: {
+          type: String,
+          required: true,
+        },
+        namePlaceholder: {
+          type: String,
+          required: true,
+        },
+        surnameText: {
+          type: String,
+          required: true,
+        },
+        surnamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        emailText: {
+          type: String,
+          required: true,
+        },
+        emailPlaceholder: {
+          type: String,
+          required: true,
+        },
+        continueAsGuestButton: {
+          type: String,
+          required: true,
+        },
+        loginEmailText: {
+          type: String,
+          required: true,
+        },
+        loginEmailPlaceholder: {
+          type: String,
+          required: true,
+        },
+        loginPasswordText: {
+          type: String,
+          required: true,
+        },
+        loginPasswordPlaceholder: {
+          type: String,
+          required: true,
+        },
+        loginButton: {
+          type: String,
+          required: true,
+        },
+        deliveryTab: {
+          type: String,
+          required: true,
+        },
+        savedAddressNameText: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        addressPlaceholder: {
+          type: String,
+          required: true,
+        },
+        cityText: {
+          type: String,
+          required: true,
+        },
+        cityPlaceholder: {
+          type: String,
+          required: true,
+        },
+        postCodeText: {
+          type: String,
+          required: true,
+        },
+        postCodePlaceholder: {
+          type: String,
+          required: true,
+        },
+        countryText: {
+          type: String,
+          required: true,
+        },
+        countryPlaceholder: {
+          type: String,
+          required: true,
+        },
+        commentText: {
+          type: String,
+          required: true,
+        },
+        commentPlaceholder: {
+          type: String,
+          required: true,
+        },
+        deliverToTitale: {
+          type: String,
+          required: true,
+        },
+        legalEntityPerson: {
+          type: String,
+          required: true,
+        },
+        name: {
+          type: String,
+          required: true,
+        },
+        surname: {
+          type: String,
+          required: true,
+        },
+        phone: {
+          type: String,
+          required: true,
+        },
+        legalEntityCompany: {
+          type: String,
+          required: true,
+        },
+        companyName: {
+          type: String,
+          required: true,
+        },
+        companyCode: {
+          type: String,
+          required: true,
+        },
+        companyVatCode: {
+          type: String,
+          required: true,
+        },
+        companyPhone: {
+          type: String,
+          required: true,
+        },
+        chooseSavedAddressText: {
+          type: String,
+          required: true,
+        },
+        continueButton: {
+          type: String,
+          required: true,
+        },
+        paymentTab: {
+          type: String,
+          required: true,
+        },
+        confirmationTab: {
+          type: String,
+          required: true,
+        },
+      },
     },
     // -------- vartotojų panelės puslapiai --------
     profileSettingsBuyerPage: {
