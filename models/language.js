@@ -1673,6 +1673,8 @@ const languageSchema = new Schema(
       },
     },
     // -------- vartotojų panelės puslapiai --------
+
+    // -------- pirkėjo panelės puslapiai --------
     profileSettingsBuyerPage: {
       url: {
         type: String,
@@ -2008,6 +2010,7 @@ const languageSchema = new Schema(
         },
       },
     },
+    // -------- pardavėjo panelės puslapiai --------
 
     // dar reikia papildyti
 
