@@ -1,20 +1,11 @@
 const mongoose = require("mongoose");
 const carSchema = require("./car");
 const powerSchema = require("./engine");
+const categorySchema = require("./category");
+const subcategorySchema = require("./category");
+const partNamesSchema = require("./category");
 
 const Schema = mongoose.Schema;
-
-// kategorijos schema
-const categorySchema = new Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  iconUrl: {
-    type: String,
-    required: true,
-  },
-});
 
 // detalės schema
 const partSchema = new Schema(
@@ -34,26 +25,18 @@ const partSchema = new Schema(
     },
 
     // detalės subkategorija
-    subcategory: categorySchema.add([
-      {
-        subcategory: {
-          type: categorySchema,
-          required: true,
-          unique: true,
-        },
-      },
-    ]),
+    subcategory: {
+      type: subcategorySchema,
+      required: true,
+      unique: true,
+    },
 
     // detalės pavadinimas (sub-subkategorija)
-    partName: subCategory.add([
-      {
-        partName: {
-          type: String,
-          required: true,
-          unique: true,
-        },
-      },
-    ]),
+    partName: {
+      type: partNamesSchema,
+      required: true,
+      unique: true,
+    },
     // detalių kodai
     codes: [
       {

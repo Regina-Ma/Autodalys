@@ -43,6 +43,7 @@ const personContactsModel = Address.discriminator(
       type: String,
       required: true,
     },
+
     isVATPayer: {
       type: Boolean,
       required: true,
