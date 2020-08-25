@@ -36,6 +36,39 @@ const languageSchema = new Schema(
         },
       },
     },
+    registrationTypeWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: {
+        register: {
+          type: String,
+          required: true,
+        },
+        registerBuyerText: {
+          type: String,
+          required: true,
+        },
+        registerSellerText: {
+          type: String,
+          required: true,
+        },
+        registerBuyerButton: {
+          type: String,
+          required: true,
+        },
+        registerSellerButton: {
+          type: String,
+          required: true,
+        },
+      },
+    },
     sideNavigationFront: {
       pageFields: {
         delivery: {
@@ -423,39 +456,6 @@ const languageSchema = new Schema(
           required: true,
         },
         aboutSectionText: {
-          type: String,
-          required: true,
-        },
-      },
-    },
-    registrationTypeWindow: {
-      pageTitle: {
-        type: String,
-        required: true,
-      },
-      pageDescription: {
-        type: String,
-        required: true,
-        max: 160,
-      },
-      pageFields: {
-        register: {
-          type: String,
-          required: true,
-        },
-        registerBuyerText: {
-          type: String,
-          required: true,
-        },
-        registerSellerText: {
-          type: String,
-          required: true,
-        },
-        registerBuyerButton: {
-          type: String,
-          required: true,
-        },
-        registerSellerButton: {
           type: String,
           required: true,
         },
@@ -1008,6 +1008,71 @@ const languageSchema = new Schema(
         },
       },
     },
+    singleCarSearchPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageDescription: {
+        type: String,
+        required: true,
+        max: 160,
+      },
+      pageFields: {
+        dismantledCarPhotosText: {
+          type: String,
+          required: true,
+        },
+        sortText: {
+          type: String,
+          required: true,
+        },
+        sortingSelect: {
+          type: String,
+          required: true,
+        },
+        foundResultsText: {
+          type: String,
+          required: true,
+        },
+        previousPage: {
+          type: String,
+          required: true,
+        },
+        nextPage: {
+          type: String,
+          required: true,
+        },
+        partCodes: {
+          type: String,
+          required: true,
+        },
+        partCondition: {
+          type: String,
+          required: true,
+        },
+        partSellerRatings: {
+          type: String,
+          required: true,
+        },
+        partPrice: {
+          type: String,
+          required: true,
+        },
+        addToCart: {
+          type: String,
+          required: true,
+        },
+        buy: {
+          type: String,
+          required: true,
+        },
+      },
+    },
     advertisementPage: {
       url: {
         type: String,
@@ -1177,27 +1242,6 @@ const languageSchema = new Schema(
         },
       },
     },
-    singleCarAdvertisementSide: {
-      url: {
-        type: String,
-        required: true,
-      },
-      pageTitle: {
-        type: String,
-        required: true,
-      },
-      pageDescription: {
-        type: String,
-        required: true,
-        max: 160,
-      },
-      pageFields: {
-        dismantledCarPhotosText: {
-          type: String,
-          required: true,
-        },
-      },
-    },
     privacyPolicyPage: {
       url: {
         type: String,
@@ -1254,12 +1298,28 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        partProductCode: {
+          type: String,
+          required: true,
         },
-      ],
+        addToCartLink: {
+          type: String,
+          required: true,
+        },
+        removeFromSavedPartsLink: {
+          type: String,
+          required: true,
+        },
+        totalAmountText: {
+          type: String,
+          required: true,
+        },
+        deliveryText: {
+          type: String,
+          required: true,
+        },
+      },
     },
     cartPage: {
       url: {
@@ -1275,12 +1335,32 @@ const languageSchema = new Schema(
         required: true,
         max: 160,
       },
-      pageFields: [
-        {
-          type: Map,
-          of: String,
+      pageFields: {
+        sellerText: {
+          type: String,
+          required: true,
         },
-      ],
+        partProductCode: {
+          type: String,
+          required: true,
+        },
+        removeFromCartLink: {
+          type: String,
+          required: true,
+        },
+        totalAmountText: {
+          type: String,
+          required: true,
+        },
+        deliveryText: {
+          type: String,
+          required: true,
+        },
+        continueButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     buyingProcessPage: {
       url: {
@@ -1302,6 +1382,10 @@ const languageSchema = new Schema(
           required: true,
         },
         loginTab: {
+          type: String,
+          required: true,
+        },
+        loginTabTitle: {
           type: String,
           required: true,
         },
@@ -1369,6 +1453,10 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
+        deliveryTabTitle: {
+          type: String,
+          required: true,
+        },
         savedAddressNameText: {
           type: String,
           required: true,
@@ -1413,7 +1501,7 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        deliverToTitale: {
+        deliverToTitle: {
           type: String,
           required: true,
         },
@@ -1457,7 +1545,32 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        continueButton: {
+        continueToDeliveryTypeButton: {
+          type: String,
+          required: true,
+        },
+        deliveryAddressText: {
+          type: String,
+          required: true,
+        },
+        changeDeliveryAddressLink: {
+          type: String,
+          required: true,
+        },
+        deliveryTypesText: {
+          type: String,
+          required: true,
+        },
+        deliveryType1: {
+          type: String,
+          required: true,
+        },
+        deliveryType2: {
+          type: String,
+          required: true,
+        },
+        //  ateityje gali buti daugiau pristatymo budu
+        continueToPaymentButton: {
           type: String,
           required: true,
         },
@@ -1465,7 +1578,95 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
+        paymentTabTitle: {
+          type: String,
+          required: true,
+        },
+        bankPaymentsTab: {
+          type: String,
+          required: true,
+        },
+        chooseBankText: {
+          type: String,
+          required: true,
+        },
+        cardPaymentsTab: {
+          type: String,
+          required: true,
+        },
+        continueToConfirmationButton: {
+          type: String,
+          required: true,
+        },
         confirmationTab: {
+          type: String,
+          required: true,
+        },
+        confirmationTabTitle: {
+          type: String,
+          required: true,
+        },
+        sellerText: {
+          type: String,
+          required: true,
+        },
+        removePartFromOrderButton: {
+          type: String,
+          required: true,
+        },
+        deliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        changeDeliveryTypeLink: {
+          type: String,
+          required: true,
+        },
+        paymentTypeText: {
+          type: String,
+          required: true,
+        },
+        changePaymentTypeLink: {
+          type: String,
+          required: true,
+        },
+        partsPriceText: {
+          type: String,
+          required: true,
+        },
+        deliveryPriceText: {
+          type: String,
+          required: true,
+        },
+        totalPriceWithoutVat: {
+          type: String,
+          required: true,
+        },
+        vatAmount: {
+          type: String,
+          required: true,
+        },
+        totalPriceWithVat: {
+          type: String,
+          required: true,
+        },
+        totalForPartsText: {
+          type: String,
+          required: true,
+        },
+        totalForDeliveryText: {
+          type: String,
+          required: true,
+        },
+        totalSumText: {
+          type: String,
+          required: true,
+        },
+        agreeRules: {
+          type: String,
+          required: true,
+        },
+        confirmOrderButton: {
           type: String,
           required: true,
         },
