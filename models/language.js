@@ -4125,8 +4125,227 @@ const languageSchema = new Schema(
     },
 
     // -------- vartotojų panelės puslapiai --------
-
+    adminUsersSettingsPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        searcUserText: {
+          type: String,
+          required: true,
+        },
+        filterButton: {
+          type: String,
+          required: true,
+        },
+        columnEmailText: {
+          type: String,
+          required: true,
+        },
+        columnRegistrationTimeText: {
+          type: String,
+          required: true,
+        },
+        columnIsVerifiedText: {
+          type: String,
+          required: true,
+        },
+        columnIsSellerText: {
+          type: String,
+          required: true,
+        },
+        columnSellerNameText: {
+          type: String,
+          required: true,
+        },
+        columnNumberOfAddressesText: {
+          type: String,
+          required: true,
+        },
+        columnActionsText: {
+          type: String,
+          required: true,
+        },
+        blockUserLink: {
+          type: String,
+          required: true,
+        },
+        viewUserLink: {
+          type: String,
+          required: true,
+        },
+      },
+    },
     // -------- turinio valdymo panelės puslapiai --------
+    adminCmsSettingsPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        cookiesTitle: {
+          type: String,
+          required: true,
+        },
+        cookiesName1: {
+          type: String,
+          required: true,
+        },
+        cookiesName2: {
+          type: String,
+          required: true,
+        },
+        cookiesName3: {
+          type: String,
+          required: true,
+        },
+        cookiesName4: {
+          type: String,
+          required: true,
+        },
+        editCookieButton: {
+          type: String,
+          required: true,
+        },
+        deleteCookieButton: {
+          type: String,
+          required: true,
+        },
+        addNewCookieTitle: {
+          type: String,
+          required: true,
+        },
+        addNewTitleText: {
+          type: String,
+          required: true,
+        },
+        addNewTitlePlaceholder: {
+          type: String,
+          required: true,
+        },
+        addNewCookieText: {
+          type: String,
+          required: true,
+        },
+        addNewCookiePlaceholder: {
+          type: String,
+          required: true,
+        },
+        addButton: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    adminCmsEmailsPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        selectTemplateText: {
+          type: String,
+          required: true,
+        },
+        selectTemplateButton: {
+          type: String,
+          required: true,
+        },
+        selectLanguageText: {
+          type: String,
+          required: true,
+        },
+        senderEmailText: {
+          type: String,
+          required: true,
+        },
+        senderEmailPlaceholder: {
+          type: String,
+          required: true,
+        },
+        senderNameText: {
+          type: String,
+          required: true,
+        },
+        senderNamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        templateNameText: {
+          type: String,
+          required: true,
+        },
+        templateNamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        templateBodyTitle: {
+          type: String,
+          required: true,
+        },
+        templateBodyData: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    adminCmsPagesPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        selectPageText: {
+          type: String,
+          required: true,
+        },
+        selectPageButton: {
+          type: String,
+          required: true,
+        },
+        selectLanguageText: {
+          type: String,
+          required: true,
+        },
+        pageNameText: {
+          type: String,
+          required: true,
+        },
+        pageNamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        templateBodyData: {
+          type: String,
+          required: true,
+        },
+      },
+    },
 
     // ---------------- el. laiškų šablonai ----------------
     verifyUserEmailTemplate: {
