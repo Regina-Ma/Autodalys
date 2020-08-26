@@ -63,6 +63,16 @@ const engineSchema = new Schema(
         "bioethanol",
         "other",
       ],
+      translations: {
+        lt: {
+          type: String,
+          required: true,
+        },
+        en: {
+          type: String,
+          required: true,
+        },
+      },
       required: true,
     },
     cars: [

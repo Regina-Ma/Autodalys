@@ -58,16 +58,46 @@ const carSchema = new Schema({
       "mixed",
       "other",
     ],
+    translations: {
+      lt: {
+        type: String,
+        required: true,
+      },
+      en: {
+        type: String,
+        required: true,
+      },
+    },
     required: false,
   },
   steeringWheelPosition: {
     type: String,
     enum: ["left", "right"],
+    translations: {
+      lt: {
+        type: String,
+        required: true,
+      },
+      en: {
+        type: String,
+        required: true,
+      },
+    },
     required: false,
   },
   transmission: {
     type: String,
     enum: ["manual", "automatic"],
+    translations: {
+      lt: {
+        type: String,
+        required: true,
+      },
+      en: {
+        type: String,
+        required: true,
+      },
+    },
     required: false,
   },
   bodyType: {
@@ -86,11 +116,31 @@ const carSchema = new Schema({
       "limousine",
       "pickup",
     ],
+    translations: {
+      lt: {
+        type: String,
+        required: true,
+      },
+      en: {
+        type: String,
+        required: true,
+      },
+    },
     required: false,
   },
   drivingWheels: {
     type: String,
     enum: ["front", "rear", "all", "four"],
+    translations: {
+      lt: {
+        type: String,
+        required: true,
+      },
+      en: {
+        type: String,
+        required: true,
+      },
+    },
     required: false,
   },
   photoUrls: [

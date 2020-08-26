@@ -52,6 +52,16 @@ const orderSchema = new Schema(
     deliveryType: {
       type: String,
       enum: ["pick-up", "courier"],
+      translations: {
+        lt: {
+          type: String,
+          required: true,
+        },
+        en: {
+          type: String,
+          required: true,
+        },
+      },
       required: true,
     },
     deliverTo: {
@@ -71,6 +81,16 @@ const orderSchema = new Schema(
     courier: {
       type: String,
       enum: ["dpd", "post"],
+      translations: {
+        lt: {
+          type: String,
+          required: true,
+        },
+        en: {
+          type: String,
+          required: true,
+        },
+      },
       required: true,
     },
     deliveryPrice: {
@@ -94,11 +114,31 @@ const orderSchema = new Schema(
     paymentType: {
       type: String,
       enum: ["mangopay", "paysera"],
+      translations: {
+        lt: {
+          type: String,
+          required: true,
+        },
+        en: {
+          type: String,
+          required: true,
+        },
+      },
       required: true,
     },
     paymentStatus: {
       type: String,
       enum: ["unpaid", "paid"],
+      translations: {
+        lt: {
+          type: String,
+          required: true,
+        },
+        en: {
+          type: String,
+          required: true,
+        },
+      },
       required: true,
     },
     paymentTime: {
@@ -110,6 +150,16 @@ const orderSchema = new Schema(
         status: {
           type: String,
           enum: ["unpaid", "paid", "processing", "shipped", "delivered"],
+          translations: {
+            lt: {
+              type: String,
+              required: true,
+            },
+            en: {
+              type: String,
+              required: true,
+            },
+          },
           required: true,
         },
         statusChangeTime: {

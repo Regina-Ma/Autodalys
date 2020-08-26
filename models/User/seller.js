@@ -8,6 +8,16 @@ const sellerSchema = new Schema(
     legalEntity: {
       type: String,
       enum: ["person", "company"],
+      translations: {
+        lt: {
+          type: String,
+          required: true,
+        },
+        en: {
+          type: String,
+          required: true,
+        },
+      },
       required: true,
     },
     isVATPayer: {

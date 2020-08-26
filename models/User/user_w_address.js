@@ -36,6 +36,16 @@ const userSchema = new Schema(
     role: {
       type: String,
       enum: ["admin", "buyer", "seller"],
+      translations: {
+        lt: {
+          type: String,
+          required: true,
+        },
+        en: {
+          type: String,
+          required: true,
+        },
+      },
       default: "buyer",
       required: () => this.isUserRegistered === true,
     },
@@ -47,6 +57,16 @@ const userSchema = new Schema(
     legalEntity: {
       type: String,
       enum: ["person", "company"],
+      translations: {
+        lt: {
+          type: String,
+          required: true,
+        },
+        en: {
+          type: String,
+          required: true,
+        },
+      },
       required: false,
     },
     contacts: [

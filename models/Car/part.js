@@ -99,6 +99,16 @@ const partSchema = new Schema(
           "bioethanol",
           "other",
         ],
+        translations: {
+          lt: {
+            type: String,
+            required: true,
+          },
+          en: {
+            type: String,
+            required: true,
+          },
+        },
         required: false,
       },
 
@@ -112,6 +122,16 @@ const partSchema = new Schema(
       steeringWheelPosition: {
         type: String,
         enum: ["left", "right"],
+        translations: {
+          lt: {
+            type: String,
+            required: true,
+          },
+          en: {
+            type: String,
+            required: true,
+          },
+        },
         required: false,
       },
 
@@ -119,6 +139,16 @@ const partSchema = new Schema(
       transmission: {
         type: String,
         enum: ["manual", "automatic"],
+        translations: {
+          lt: {
+            type: String,
+            required: true,
+          },
+          en: {
+            type: String,
+            required: true,
+          },
+        },
         required: false,
       },
 
@@ -139,13 +169,33 @@ const partSchema = new Schema(
           "limousine",
           "pickup",
         ],
+        translations: {
+          lt: {
+            type: String,
+            required: true,
+          },
+          en: {
+            type: String,
+            required: true,
+          },
+        },
         required: false,
       },
 
       // automobilio varomieji ratai, pasirenkama iš sąrašo
       drivingWheels: {
         type: String,
-        enum: ["front", "rear", "all"],
+        enum: ["front", "rear", "all", "four"],
+        translations: {
+          lt: {
+            type: String,
+            required: true,
+          },
+          en: {
+            type: String,
+            required: true,
+          },
+        },
         required: false,
       },
 
@@ -166,6 +216,16 @@ const partSchema = new Schema(
           "mixed",
           "other",
         ],
+        translations: {
+          lt: {
+            type: String,
+            required: true,
+          },
+          en: {
+            type: String,
+            required: true,
+          },
+        },
         required: false,
       },
     },
@@ -189,6 +249,16 @@ const partSchema = new Schema(
         "rear_left",
         "rear_right",
       ],
+      translations: {
+        lt: {
+          type: String,
+          required: true,
+        },
+        en: {
+          type: String,
+          required: true,
+        },
+      },
       required: false,
     },
 
@@ -225,6 +295,16 @@ const partSchema = new Schema(
     condition: {
       type: String,
       enum: ["new", "used", "refurbished"],
+      translations: {
+        lt: {
+          type: String,
+          required: true,
+        },
+        en: {
+          type: String,
+          required: true,
+        },
+      },
       required: true,
     },
 
@@ -232,6 +312,16 @@ const partSchema = new Schema(
     status: {
       type: String,
       enum: ["unavailable", "available", "reserved", "sold"],
+      translations: {
+        lt: {
+          type: String,
+          required: true,
+        },
+        en: {
+          type: String,
+          required: true,
+        },
+      },
       required: true,
     },
 
