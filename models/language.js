@@ -3904,7 +3904,229 @@ const languageSchema = new Schema(
         },
       },
     },
-    // dar reikia papildyti
+    // ---------------- sistemos administratoriaus panelės puslapiai ----------------
+
+    // -------- statistikos panelės puslapiai --------
+    adminStatisticsUsersPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        filterButton: {
+          type: String,
+          required: true,
+        },
+        newUsersText: {
+          type: String,
+          required: true,
+        },
+        buyersSellersText: {
+          type: String,
+          required: true,
+        },
+        usersCountText: {
+          type: String,
+          required: true,
+        },
+        sellersByPaymentStatusText: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    adminStatisticsAdvertisementsPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        filerByUserText: {
+          type: String,
+          required: true,
+        },
+        filterButton: {
+          type: String,
+          required: true,
+        },
+        adViewsText: {
+          type: String,
+          required: true,
+        },
+        carsText: {
+          type: String,
+          required: true,
+        },
+        partsText: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    adminStatisticsOrdersPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        filerByUserText: {
+          type: String,
+          required: true,
+        },
+        filterButton: {
+          type: String,
+          required: true,
+        },
+        turnoverText: {
+          type: String,
+          required: true,
+        },
+        ordersText: {
+          type: String,
+          required: true,
+        },
+        carsText: {
+          type: String,
+          required: true,
+        },
+        deliveryTypesText: {
+          type: String,
+          required: true,
+        },
+        deliveriesToLithuaniaDistrictsText: {
+          type: String,
+          required: true,
+        },
+        deliveriesByCountriesText: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    adminStatisticsQueriesPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        filerByUserText: {
+          type: String,
+          required: true,
+        },
+        filterButton: {
+          type: String,
+          required: true,
+        },
+        queriesByStatusText: {
+          type: String,
+          required: true,
+        },
+        queriesByMakeText: {
+          type: String,
+          required: true,
+        },
+        queriesByModelText: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    adminStatisticsIncomePage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        filerByUserText: {
+          type: String,
+          required: true,
+        },
+        filterButton: {
+          type: String,
+          required: true,
+        },
+        commissionsText: {
+          type: String,
+          required: true,
+        },
+        commisionsTurnoverText: {
+          type: String,
+          required: true,
+        },
+        commissionsTimelineText: {
+          type: String,
+          required: true,
+        },
+        commissionsByPaymentStatusText: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+
+    // -------- vartotojų panelės puslapiai --------
+
+    // -------- turinio valdymo panelės puslapiai --------
 
     // ---------------- el. laiškų šablonai ----------------
     verifyUserEmailTemplate: {
