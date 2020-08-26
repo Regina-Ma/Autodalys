@@ -15,6 +15,7 @@ const languageSchema = new Schema(
       type: String,
       required: true,
     },
+    // --------------------------------------------------------------------------------
     // ---------------- navigacijos komponentai ----------------
     topNavigation: {
       pageFields: {
@@ -311,6 +312,7 @@ const languageSchema = new Schema(
         },
       },
     },
+    // --------------------------------------------------------------------------------
     // ---------------- frontiniai puslapiai ----------------
     landingPage: {
       url: {
@@ -1672,6 +1674,7 @@ const languageSchema = new Schema(
         },
       },
     },
+    // --------------------------------------------------------------------------------
     // ---------------- vartotojų panelės puslapiai ----------------
 
     // -------- pirkėjo panelės puslapiai --------
@@ -3904,8 +3907,8 @@ const languageSchema = new Schema(
         },
       },
     },
+    // --------------------------------------------------------------------------------
     // ---------------- sistemos administratoriaus panelės puslapiai ----------------
-
     // -------- statistikos panelės puslapiai --------
     adminStatisticsUsersPage: {
       url: {
@@ -4125,6 +4128,7 @@ const languageSchema = new Schema(
     },
 
     // -------- vartotojų panelės puslapiai --------
+    // vartotojų nustatymai
     adminUsersSettingsPage: {
       url: {
         type: String,
@@ -4193,7 +4197,7 @@ const languageSchema = new Schema(
         },
       },
     },
-    adminUsersSettingsViewProfileWindow: {
+    adminUsersSettingsViewProfilesWindow: {
       pageTitle: {
         type: String,
         required: true,
@@ -4333,25 +4337,17 @@ const languageSchema = new Schema(
         },
       },
     },
-    adminUsersSettingsviewAddressesWindow: {
+    adminUsersSettingsViewAddressesWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
       pageFields: {
-        legalEntity: {
+        addressNameText: {
           type: String,
           required: true,
         },
-        nameText: {
-          type: String,
-          required: true,
-        },
-        surnameText: {
-          type: String,
-          required: true,
-        },
-        phoneText: {
+        addressNamePlaceholder: {
           type: String,
           required: true,
         },
@@ -4359,7 +4355,15 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
+        addressPlaceholder: {
+          type: String,
+          required: true,
+        },
         cityText: {
+          type: String,
+          required: true,
+        },
+        cityPlaceholder: {
           type: String,
           required: true,
         },
@@ -4367,7 +4371,15 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
+        postCodePlaceholder: {
+          type: String,
+          required: true,
+        },
         countryText: {
+          type: String,
+          required: true,
+        },
+        countryPlaceholder: {
           type: String,
           required: true,
         },
@@ -4375,7 +4387,47 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
+        commentPlaceholder: {
+          type: String,
+          required: true,
+        },
+        legalEntityPersonText: {
+          type: String,
+          required: true,
+        },
+        nameText: {
+          type: String,
+          required: true,
+        },
+        namePlaceholder: {
+          type: String,
+          required: true,
+        },
+        surnameText: {
+          type: String,
+          required: true,
+        },
+        surnamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        enterPhonePlaceholder: {
+          type: String,
+          required: true,
+        },
+        legalEntityCompanyText: {
+          type: String,
+          required: true,
+        },
         companyNameText: {
+          type: String,
+          required: true,
+        },
+        companyNamePlaceholder: {
           type: String,
           required: true,
         },
@@ -4383,7 +4435,7 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        vatText: {
+        companyCodePlaceholder: {
           type: String,
           required: true,
         },
@@ -4395,20 +4447,443 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        emailText: {
-          type: String,
-          required: true,
-        },
-        editAddressButton: {
-          type: String,
-          required: true,
-        },
         addAddressButton: {
           type: String,
           required: true,
         },
       },
     },
+    adminUsersSettingsAddAddressWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        addressNameText: {
+          type: String,
+          required: true,
+        },
+        addressNamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        addressPlaceholder: {
+          type: String,
+          required: true,
+        },
+        cityText: {
+          type: String,
+          required: true,
+        },
+        cityPlaceholder: {
+          type: String,
+          required: true,
+        },
+        postCodeText: {
+          type: String,
+          required: true,
+        },
+        postCodePlaceholder: {
+          type: String,
+          required: true,
+        },
+        countryText: {
+          type: String,
+          required: true,
+        },
+        countryPlaceholder: {
+          type: String,
+          required: true,
+        },
+        commentText: {
+          type: String,
+          required: true,
+        },
+        commentPlaceholder: {
+          type: String,
+          required: true,
+        },
+        legalEntityPersonText: {
+          type: String,
+          required: true,
+        },
+        nameText: {
+          type: String,
+          required: true,
+        },
+        namePlaceholder: {
+          type: String,
+          required: true,
+        },
+        surnameText: {
+          type: String,
+          required: true,
+        },
+        surnamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        enterPhonePlaceholder: {
+          type: String,
+          required: true,
+        },
+        legalEntityCompanyText: {
+          type: String,
+          required: true,
+        },
+        companyNameText: {
+          type: String,
+          required: true,
+        },
+        companyNamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        companyCodeText: {
+          type: String,
+          required: true,
+        },
+        companyCodePlaceholder: {
+          type: String,
+          required: true,
+        },
+        companyRepresentativeName: {
+          type: String,
+          required: true,
+        },
+        companyRepresentativeSurname: {
+          type: String,
+          required: true,
+        },
+        saveAddressButton: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    adminUsersSettingsEditAddressWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        addressNameText: {
+          type: String,
+          required: true,
+        },
+        addressNamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        addressPlaceholder: {
+          type: String,
+          required: true,
+        },
+        cityText: {
+          type: String,
+          required: true,
+        },
+        cityPlaceholder: {
+          type: String,
+          required: true,
+        },
+        postCodeText: {
+          type: String,
+          required: true,
+        },
+        postCodePlaceholder: {
+          type: String,
+          required: true,
+        },
+        countryText: {
+          type: String,
+          required: true,
+        },
+        countryPlaceholder: {
+          type: String,
+          required: true,
+        },
+        commentText: {
+          type: String,
+          required: true,
+        },
+        commentPlaceholder: {
+          type: String,
+          required: true,
+        },
+        legalEntityPersonText: {
+          type: String,
+          required: true,
+        },
+        nameText: {
+          type: String,
+          required: true,
+        },
+        namePlaceholder: {
+          type: String,
+          required: true,
+        },
+        surnameText: {
+          type: String,
+          required: true,
+        },
+        surnamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        enterPhonePlaceholder: {
+          type: String,
+          required: true,
+        },
+        legalEntityCompanyText: {
+          type: String,
+          required: true,
+        },
+        companyNameText: {
+          type: String,
+          required: true,
+        },
+        companyNamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        companyCodeText: {
+          type: String,
+          required: true,
+        },
+        companyCodePlaceholder: {
+          type: String,
+          required: true,
+        },
+        companyRepresentativeName: {
+          type: String,
+          required: true,
+        },
+        companyRepresentativeSurname: {
+          type: String,
+          required: true,
+        },
+        updateAddressButton: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    // PAGE FIELDS ARE EMPTY YET
+
+    // vartotojų krepšeliai
+    adminUsersCartsPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersCartsAddCartWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersCartsEditCartWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    // vartotojų ardomi automobiliai
+    adminUsersCarsPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersCarsViewCarWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersCarsAddWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersCarsEditWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    // vartotojų parduodamos detalės
+    adminUsersPartsPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersPartsViewPartWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersPartsAddPartWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersPartsEditPartWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    // vartotojų užsakymai
+    adminUsersOrdersPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersOrdersViewOrderWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersOrdersAddOrderWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersOrdersEditOrderWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    // vartotojų sąskaitos faktūros
+    adminUsersInvoicesPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersInvoicesViewInvoiceWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersInvoicesAddInvoiceWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersInvoicesEditInvoiceWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    // vartotojų užklausos
+    adminUsersQueriesPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersQueriesViewQueryWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    adminUsersQueriesEditQueryWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+    // vartotojų duomenų importavimas/eksportavimas
+    adminUsersImportExportPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {},
+    },
+
     // -------- turinio valdymo panelės puslapiai --------
     adminCmsSettingsPage: {
       url: {
@@ -4608,6 +5083,7 @@ const languageSchema = new Schema(
         required: true,
       },
     },
+    // --------------------------------------------------------------------------------
     // ---------------- detalės kategorijos, subkategorijos ir pavadinimai ----------------
     partCategorization: {
       partCategories: [
@@ -4629,6 +5105,7 @@ const languageSchema = new Schema(
         },
       ],
     },
+    // --------------------------------------------------------------------------------
     // ---------------- filtrų reikšmės ----------------
     carEnums: {
       fuelType: [
