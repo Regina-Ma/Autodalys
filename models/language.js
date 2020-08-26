@@ -533,7 +533,7 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        email: {
+        emailText: {
           type: String,
           required: true,
         },
@@ -541,7 +541,7 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        password: {
+        passwordText: {
           type: String,
           required: true,
         },
@@ -549,43 +549,43 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        isPerson: {
+        isPersonText: {
           type: String,
           required: true,
         },
-        name: {
+        nameText: {
           type: String,
           required: true,
         },
-        surname: {
+        surnameText: {
           type: String,
           required: true,
         },
-        phone: {
+        phoneText: {
           type: String,
           required: true,
         },
-        personCommerceCode: {
+        personCommerceCodeText: {
           type: String,
           required: true,
         },
-        isVATPayer: {
+        isVATPayerText: {
           type: String,
           required: true,
         },
-        VAT: {
+        VATText: {
           type: String,
           required: true,
         },
-        isCompany: {
+        isCompanyText: {
           type: String,
           required: true,
         },
-        companyName: {
+        companyNameText: {
           type: String,
           required: true,
         },
-        companyCode: {
+        companyCodeText: {
           type: String,
           required: true,
         },
@@ -597,11 +597,11 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        companyPhone: {
+        companyPhoneText: {
           type: String,
           required: true,
         },
-        companyEmail: {
+        companyEmailText: {
           type: String,
           required: true,
         },
@@ -2053,43 +2053,43 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        legalEntityPerson: {
+        legalEntityPersonText: {
           type: String,
           required: true,
         },
-        name: {
+        nameText: {
           type: String,
           required: true,
         },
-        surname: {
+        surnameText: {
           type: String,
           required: true,
         },
-        phone: {
+        phoneText: {
           type: String,
           required: true,
         },
-        personCommerceCode: {
+        personCommerceCodeText: {
           type: String,
           required: true,
         },
-        isVATPayer: {
+        isVATPayerText: {
           type: String,
           required: true,
         },
-        VAT: {
+        VATText: {
           type: String,
           required: true,
         },
-        legalEntityCompany: {
+        legalEntityCompanyText: {
           type: String,
           required: true,
         },
-        companyName: {
+        companyNameText: {
           type: String,
           required: true,
         },
-        companyCode: {
+        companyCodeText: {
           type: String,
           required: true,
         },
@@ -4183,7 +4183,227 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        viewUserLink: {
+        viewUserProfileLink: {
+          type: String,
+          required: true,
+        },
+        viewUserAddressesLink: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    adminUsersSettingsViewProfileWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        saveEmailButton: {
+          type: String,
+          required: true,
+        },
+        sendPassWrodChangeEmailLink: {
+          type: String,
+          required: true,
+        },
+        sendPasswordChangeButton: {
+          type: String,
+          required: true,
+        },
+        isSellerText: {
+          type: String,
+          required: true,
+        },
+        legalEntityPersonText: {
+          type: String,
+          required: true,
+        },
+        nameText: {
+          type: String,
+          required: true,
+        },
+        surnameText: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        legalEntityCompanyText: {
+          type: String,
+          required: true,
+        },
+        companyNameText: {
+          type: String,
+          required: true,
+        },
+        companyCodeText: {
+          type: String,
+          required: true,
+        },
+        companyVatCode: {
+          type: String,
+          required: true,
+        },
+        companyPhone: {
+          type: String,
+          required: true,
+        },
+        companyRepresentativeName: {
+          type: String,
+          required: true,
+        },
+        companyRepresentativeSurname: {
+          type: String,
+          required: true,
+        },
+        workingHoursText: {
+          type: String,
+          required: true,
+        },
+        mondayHours: {
+          type: String,
+          required: true,
+        },
+        tuesdayHouurs: {
+          type: String,
+          required: true,
+        },
+        wednesdayHours: {
+          type: String,
+          required: true,
+        },
+        thursdayHours: {
+          type: String,
+          required: true,
+        },
+        fridayHours: {
+          type: String,
+          required: true,
+        },
+        saturdayHours: {
+          type: String,
+          required: true,
+        },
+        sundayHours: {
+          type: String,
+          required: true,
+        },
+        uploadLogoButton: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        addressFieldText: {
+          type: String,
+          required: true,
+        },
+        addressFieldPlaceholder: {
+          type: String,
+          required: true,
+        },
+        cityText: {
+          type: String,
+          required: true,
+        },
+        cityPlaceholder: {
+          type: String,
+          required: true,
+        },
+        postCodeText: {
+          type: String,
+          required: true,
+        },
+        countryText: {
+          type: String,
+          required: true,
+        },
+        countryPlaceholder: {
+          type: String,
+          required: true,
+        },
+        saveInfoButton: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    adminUsersSettingsviewAddressesWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        legalEntity: {
+          type: String,
+          required: true,
+        },
+        nameText: {
+          type: String,
+          required: true,
+        },
+        surnameText: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        cityText: {
+          type: String,
+          required: true,
+        },
+        postCodeText: {
+          type: String,
+          required: true,
+        },
+        countryText: {
+          type: String,
+          required: true,
+        },
+        commentText: {
+          type: String,
+          required: true,
+        },
+        companyNameText: {
+          type: String,
+          required: true,
+        },
+        companyCodeText: {
+          type: String,
+          required: true,
+        },
+        vatText: {
+          type: String,
+          required: true,
+        },
+        companyRepresentativeName: {
+          type: String,
+          required: true,
+        },
+        companyRepresentativeSurname: {
+          type: String,
+          required: true,
+        },
+        emailText: {
+          type: String,
+          required: true,
+        },
+        editAddressButton: {
+          type: String,
+          required: true,
+        },
+        addAddressButton: {
           type: String,
           required: true,
         },

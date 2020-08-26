@@ -67,7 +67,7 @@ const engineSchema = new Schema(
     },
     cars: [
       {
-        type: Schema.ectId,
+        type: Schema.ObjectId,
         ref: "Car",
       },
     ],
