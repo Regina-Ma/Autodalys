@@ -15,7 +15,7 @@ const languageSchema = new Schema(
       type: String,
       required: true,
     },
-    // -------- navigacijos komponentai --------
+    // ---------------- navigacijos komponentai ----------------
     topNavigation: {
       pageFields: {
         savedParts: {
@@ -311,7 +311,7 @@ const languageSchema = new Schema(
         },
       },
     },
-    // -------- frontiniai puslapiai --------
+    // ---------------- frontiniai puslapiai ----------------
     landingPage: {
       url: {
         type: String,
@@ -1672,7 +1672,7 @@ const languageSchema = new Schema(
         },
       },
     },
-    // -------- vartotojų panelės puslapiai --------
+    // ---------------- vartotojų panelės puslapiai ----------------
 
     // -------- pirkėjo panelės puslapiai --------
     profileSettingsBuyerPage: {
@@ -2183,6 +2183,143 @@ const languageSchema = new Schema(
         },
       },
     },
+    sellerInformationPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        mainData: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    sellerImportPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        chooseTypeText: {
+          type: String,
+          required: true,
+        },
+        partsText: {
+          type: String,
+          required: true,
+        },
+        carsText: {
+          type: String,
+          required: true,
+        },
+        importButton: {
+          type: String,
+          required: true,
+        },
+        mainData: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    sellerExportPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        chooseTypeText: {
+          type: String,
+          required: true,
+        },
+        partsText: {
+          type: String,
+          required: true,
+        },
+        carsText: {
+          type: String,
+          required: true,
+        },
+        invoicesText: {
+          type: String,
+          required: true,
+        },
+        exportButton: {
+          type: String,
+          required: true,
+        },
+        mainData: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    sellerStatisticsPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        filterText: {
+          type: String,
+          required: true,
+        },
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        turnoverText: {
+          type: String,
+          required: true,
+        },
+        partsText: {
+          type: String,
+          required: true,
+        },
+        carsText: {
+          type: String,
+          required: true,
+        },
+        ordersText: {
+          type: String,
+          required: true,
+        },
+        adViewsText: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    // ardomi automobiliai
     sellerCarsPage: {
       url: {
         type: String,
@@ -2431,6 +2568,7 @@ const languageSchema = new Schema(
         },
       },
     },
+    // parduodamos detalės
     sellerPartsPage: {
       url: {
         type: String,
@@ -3219,6 +3357,7 @@ const languageSchema = new Schema(
         },
       },
     },
+    // gauti užsakymai
     sellerOrdersPage: {
       url: {
         type: String,
@@ -3301,6 +3440,179 @@ const languageSchema = new Schema(
         required: true,
       },
       pageFields: {
+        orderNumberText: {
+          type: String,
+          required: true,
+        },
+        orderDateText: {
+          type: String,
+          required: true,
+        },
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        buyerInfoText: {
+          type: String,
+          required: true,
+        },
+        orderStatusText: {
+          type: String,
+          required: true,
+        },
+        orderStatusType: {
+          type: String,
+          required: true,
+        },
+        partsTitle: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+        deliveryPriceText: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        deliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        commentText: {
+          type: String,
+          required: true,
+        },
+        totalPriceText: {
+          type: String,
+          required: true,
+        },
+        printStickerLink: {
+          type: String,
+          required: true,
+        },
+        callCourierLink: {
+          type: String,
+          required: true,
+        },
+        orderReadyLink: {
+          type: String,
+          required: true,
+        },
+        orderDeliveredLink: {
+          type: String,
+          required: true,
+        },
+        editOrderLink: {
+          type: String,
+          required: true,
+        },
+        deleteOrderLink: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    sellerOrdersEditOrderWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        orderNumberText: {
+          type: String,
+          required: true,
+        },
+        orderDateText: {
+          type: String,
+          required: true,
+        },
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        buyerInfoText: {
+          type: String,
+          required: true,
+        },
+        orderStatusText: {
+          type: String,
+          required: true,
+        },
+        orderStatusType: {
+          type: String,
+          required: true,
+        },
+        partsTitle: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+        deletePartFromOrderLink: {
+          type: String,
+          required: true,
+        },
+        addPartToOrderText: {
+          type: String,
+          required: true,
+        },
+        addPartButton: {
+          type: String,
+          required: true,
+        },
+        deliveryPriceText: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        deliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        commentText: {
+          type: String,
+          required: true,
+        },
+        totalPriceText: {
+          type: String,
+          required: true,
+        },
+        saveButton: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    // sąskaitos faktūros
+    sellerInvoicesPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
         dateFromText: {
           type: String,
           required: true,
@@ -3325,31 +3637,19 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        orderNumberText: {
+        invoiceNumberText: {
           type: String,
           required: true,
         },
-        orderDateText: {
+        invoiceDateText: {
           type: String,
           required: true,
         },
-        orderStatusType: {
-          type: String,
-          required: true,
-        },
-        viewOrderLink: {
-          type: String,
-          required: true,
-        },
-        editOrderLink: {
+        buyerInfoText: {
           type: String,
           required: true,
         },
         partProductCodeText: {
-          type: String,
-          required: true,
-        },
-        deliveryTypeText: {
           type: String,
           required: true,
         },
@@ -3361,7 +3661,244 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        orderStatusText: {
+        viewInvoiceLink: {
+          type: String,
+          required: true,
+        },
+        editInvoiceLink: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    sellerInvoicesViewInvoiceWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        invoiceNumberText: {
+          type: String,
+          required: true,
+        },
+        invoiceDateText: {
+          type: String,
+          required: true,
+        },
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        buyerInfoText: {
+          type: String,
+          required: true,
+        },
+        partsTitle: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+        deliveryPriceText: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        deliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        totalPriceInWordsText: {
+          type: String,
+          required: true,
+        },
+        totalPriceText: {
+          type: String,
+          required: true,
+        },
+        printInvoiceLink: {
+          type: String,
+          required: true,
+        },
+        editInvoiceLink: {
+          type: String,
+          required: true,
+        },
+        deleteInvoiceLink: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    sellerInvoicesEditInvoiceWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        invoiceNumberText: {
+          type: String,
+          required: true,
+        },
+        invoiceTypeText: {
+          type: String,
+          required: true,
+        },
+        invoiceDateText: {
+          type: String,
+          required: true,
+        },
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        buyerInfoText: {
+          type: String,
+          required: true,
+        },
+        partsTitle: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+        deletePartFromOrderLink: {
+          type: String,
+          required: true,
+        },
+        addPartToOrderText: {
+          type: String,
+          required: true,
+        },
+        addPartButton: {
+          type: String,
+          required: true,
+        },
+        deliveryPriceText: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        deliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        totalPriceText: {
+          type: String,
+          required: true,
+        },
+        saveButton: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    // užklausų nustatymai ir gautos užklausos
+    sellerQueriesPage: {
+      url: {
+        type: String,
+        required: true,
+      },
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        getQueriesText: {
+          type: String,
+          required: true,
+        },
+        getAllQueriesText: {
+          type: String,
+          required: true,
+        },
+        makeText: {
+          type: String,
+          required: true,
+        },
+        modelText: {
+          type: String,
+          required: true,
+        },
+        addSearchCarFields: {
+          type: String,
+          required: true,
+        },
+        queriesReceivedTitle: {
+          type: String,
+          required: true,
+        },
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        selectStatusText: {
+          type: String,
+          required: true,
+        },
+        searchPlaceholder: {
+          type: String,
+          required: true,
+        },
+        searchButton: {
+          type: String,
+          required: true,
+        },
+        sortText: {
+          type: String,
+          required: true,
+        },
+        queryNumberText: {
+          type: String,
+          required: true,
+        },
+        queryDateText: {
+          type: String,
+          required: true,
+        },
+        queryStatusTitle: {
+          type: String,
+          required: true,
+        },
+        queryAnsweredButton: {
+          type: String,
+          required: true,
+        },
+        queryFromInfoText: {
+          type: String,
+          required: true,
+        },
+        queryCommentText: {
+          type: String,
+          required: true,
+        },
+        queryPhotosText: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
           type: String,
           required: true,
         },
@@ -3369,7 +3906,7 @@ const languageSchema = new Schema(
     },
     // dar reikia papildyti
 
-    // -------- el. laiškų šablonai --------
+    // ---------------- el. laiškų šablonai ----------------
     verifyUserEmailTemplate: {
       senderEmail: {
         type: String,
@@ -3410,7 +3947,7 @@ const languageSchema = new Schema(
         required: true,
       },
     },
-    // -------- detalės kategorijos, subkategorijos ir pavadinimai --------
+    // ---------------- detalės kategorijos, subkategorijos ir pavadinimai ----------------
     partCategorization: {
       partCategories: [
         {
@@ -3431,7 +3968,7 @@ const languageSchema = new Schema(
         },
       ],
     },
-    // -------- filtrų reikšmės --------
+    // ---------------- filtrų reikšmės ----------------
     carEnums: {
       fuelType: [
         {
