@@ -8,18 +8,17 @@ const categorySchema = new Schema({
     type: String,
     required: true,
   },
-  translations: [
-    {
-      lt: {
-        type: String,
-        required: true,
-      },
-      en: {
-        type: String,
-        required: true,
-      },
+  translations: {
+    lt: {
+      type: String,
+      required: true,
     },
-  ],
+    en: {
+      type: String,
+      required: true,
+    },
+  },
+
   iconUrl: {
     type: String,
     required: true,
@@ -30,36 +29,33 @@ const categorySchema = new Schema({
         type: String,
         required: true,
       },
-      translations: [
-        {
-          lt: {
-            type: String,
-            required: true,
-          },
-          en: {
-            type: String,
-            required: true,
-          },
+      translations: {
+        lt: {
+          type: String,
+          required: true,
         },
-      ],
+        en: {
+          type: String,
+          required: true,
+        },
+      },
+
       partNames: [
         {
           partName: {
             type: String,
             required: true,
           },
-          translations: [
-            {
-              lt: {
-                type: String,
-                required: true,
-              },
-              en: {
-                type: String,
-                required: true,
-              },
+          translations: {
+            lt: {
+              type: String,
+              required: true,
             },
-          ],
+            en: {
+              type: String,
+              required: true,
+            },
+          },
         },
       ],
     },
