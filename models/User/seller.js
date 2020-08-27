@@ -73,6 +73,25 @@ const sellerSchema = new Schema(
       {
         day: {
           type: String,
+          enum: [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday",
+            "sunday",
+          ],
+          translations: {
+            lt: {
+              type: String,
+              required: true,
+            },
+            en: {
+              type: String,
+              required: true,
+            },
+          },
           required: false,
         },
         workingHours: {

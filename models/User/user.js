@@ -1,7 +1,4 @@
 const mongoose = require("mongoose");
-const addressModel = require("./contacts");
-const personContactsModel = require("./contacts");
-const companyContactsModel = require("./contacts");
 const partSchema = require("./Car/part");
 
 const Schema = mongoose.Schema;
@@ -39,6 +36,7 @@ const userSchema = new Schema(
     role: {
       type: String,
       enum: ["admin", "buyer", "seller"],
+      // ar reikia vertimų rolei??
       translations: {
         lt: {
           type: String,
@@ -57,33 +55,77 @@ const userSchema = new Schema(
       ref: "Seller",
       required: () => this.role === "seller",
     },
-    legalEntity: {
-      type: String,
-      enum: ["person", "company"],
-      translations: {
-        lt: {
-          type: String,
-          required: true,
-        },
-        en: {
-          type: String,
-          required: true,
-        },
-      },
-      required: false,
-    },
-    contacts: [
+    savedAddresses: [
       {
-        personContacts: {
-          type: personContactsModel,
-          required: () => this.legalEntity === "person",
+        addressName: {
+          type: String,
+          required: true,
         },
-        companyContacts: {
-          type: companyContactsModel,
-          required: () => this.legalEntity === "company",
+        legalEntity: {
+          type: String,
+          enum: ["person", "company"],
+          translations: {
+            lt: {
+              type: String,
+              required: true,
+            },
+            en: {
+              type: String,
+              required: true,
+            },
+          },
+          required: false,
         },
-        address: {
-          type: addressModel,
+        name: {
+          type: String,
+          required: true,
+        },
+        surname: {
+          type: String,
+          required: true,
+        },
+        phone: {
+          type: String,
+          required: true,
+        },
+        companyName: {
+          type: String,
+          required: true,
+        },
+        companyCode: {
+          type: String,
+          required: true,
+        },
+        isVATPayer: {
+          type: Boolean,
+          required: true,
+        },
+        VAT: {
+          type: String,
+          required: () => this.isVATPayer,
+        },
+        addressString: {
+          type: String,
+          required: true,
+        },
+        city: {
+          type: String,
+          required: true,
+        },
+        zipCode: {
+          type: String,
+          required: true,
+        },
+        region: {
+          type: String,
+          required: true,
+        },
+        country: {
+          type: String,
+          required: true,
+        },
+        comment: {
+          type: String,
           required: true,
         },
       },
