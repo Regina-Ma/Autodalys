@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const addressModel = require("./contacts");
 
 const Schema = mongoose.Schema;
 
@@ -23,6 +22,10 @@ const sellerSchema = new Schema(
     isVATPayer: {
       type: Boolean,
       required: true,
+    },
+    VAT: {
+      type: String,
+      required: () => this.isVATPayer,
     },
     companyName: {
       type: String,
@@ -52,10 +55,7 @@ const sellerSchema = new Schema(
       type: String,
       required: () => this.legalEntity === "person",
     },
-    VAT: {
-      type: String,
-      required: () => this.isVATPayer,
-    },
+
     phone: {
       type: String,
       required: true,
@@ -64,10 +64,29 @@ const sellerSchema = new Schema(
       type: String,
       required: true,
     },
-    address: addressModel,
+    addressString: {
+      type: String,
+      required: false,
+    },
+    city: {
+      type: String,
+      required: false,
+    },
+    zipCode: {
+      type: String,
+      required: false,
+    },
+    region: {
+      type: String,
+      required: false,
+    },
+    country: {
+      type: String,
+      required: false,
+    },
     logoUrl: {
       type: String,
-      required: true,
+      required: false,
     },
     workingTime: [
       {
@@ -110,20 +129,20 @@ const sellerSchema = new Schema(
         user: {
           type: Schema.Types.ObjectId,
           ref: "User",
-          required: true,
+          required: false,
         },
         orderId: {
           type: Schema.Types.ObjectId,
           ref: "Order",
-          required: true,
+          required: false,
         },
         ratingTime: {
           type: Date,
-          required: true,
+          required: false,
         },
         rating: {
           type: Number,
-          required: true,
+          required: false,
           min: 0,
           max: 5,
         },
@@ -131,7 +150,7 @@ const sellerSchema = new Schema(
     ],
     overallRating: {
       type: Number,
-      required: true,
+      required: false,
       min: 0,
       max: 5,
       default: function () {
@@ -144,7 +163,7 @@ const sellerSchema = new Schema(
     },
     ratingsCount: {
       type: Number,
-      required: true,
+      required: false,
       default: this.totalRating / this.ratings.length,
     },
   },

@@ -59,7 +59,7 @@ const userSchema = new Schema(
       {
         addressName: {
           type: String,
-          required: true,
+          required: false,
         },
         legalEntity: {
           type: String,
@@ -67,38 +67,38 @@ const userSchema = new Schema(
           translations: {
             lt: {
               type: String,
-              required: true,
+              required: false,
             },
             en: {
               type: String,
-              required: true,
+              required: false,
             },
           },
           required: false,
         },
         name: {
           type: String,
-          required: true,
+          required: false,
         },
         surname: {
           type: String,
-          required: true,
+          required: false,
         },
         phone: {
           type: String,
-          required: true,
+          required: false,
         },
         companyName: {
           type: String,
-          required: true,
+          required: false,
         },
         companyCode: {
           type: String,
-          required: true,
+          required: false,
         },
         isVATPayer: {
           type: Boolean,
-          required: true,
+          required: false,
         },
         VAT: {
           type: String,
@@ -106,27 +106,27 @@ const userSchema = new Schema(
         },
         addressString: {
           type: String,
-          required: true,
+          required: false,
         },
         city: {
           type: String,
-          required: true,
+          required: false,
         },
         zipCode: {
           type: String,
-          required: true,
+          required: false,
         },
         region: {
           type: String,
-          required: true,
+          required: false,
         },
         country: {
           type: String,
-          required: true,
+          required: false,
         },
         comment: {
           type: String,
-          required: true,
+          required: false,
         },
       },
     ],
