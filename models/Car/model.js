@@ -2,11 +2,9 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-function modelName(make, model, start, end) {
-  return `${make} ${model} (${start} - ${end})`;
-}
-
+// automobilio modelio schema
 const modelSchema = new Schema({
+  // automobilio markė, kuriai "priklauso" šis modelis
   make: {
     makeID: {
       type: Schema.Types.ObjectId,
@@ -17,34 +15,35 @@ const modelSchema = new Schema({
       required: true,
     },
   },
+  // automobilio modelio pavadinimas
   model: {
     type: String,
     required: true,
   },
+  // automobolio modelio pilnas pavadinimas su gamybos pradžios ir pabaigos metais)
+  // panaudojamas metodas modelFullName
   modelFullName: {
     type: String,
-    get: modelName(
-      this.make.makeName,
-      this.model,
-      this.productionStart,
-      this.productionEnd
-    ),
     required: true,
   },
+  // automobilio modelio gamybos pradžios metai
   productionStart: {
     type: String,
     required: true,
   },
+  // automobilio modelio gamybos pabaigos metai
   productionEnd: {
     type: String,
     required: true,
   },
+  // automobilio modelio galimų variklių masyvas, sudarytas iš tų variklių ID
   engines: [
     {
       type: Schema.Types.ObjectId,
       ref: "Engine",
     },
   ],
+  // automobilio modelio pardavėjų ardomų automobilių masyvas, sudarytas iš tų automobilių ID
   cars: [
     {
       type: Schema.Types.ObjectId,
@@ -53,4 +52,9 @@ const modelSchema = new Schema({
   ],
 });
 
-module.exports = mongoose.model("Model", modelSchema);
+// metodas, grąžinantis pilną modelio pavadinimą (pavadinimas su gaminimo pradžios ir pabaigos metais)
+modelSchema.method("modelFullName", function modelName() {
+  return `${this.make} ${this.model} (${this.start} - ${this.end})`;
+});
+
+module.exports = { Model: mongoose.model("Model", modelSchema) };

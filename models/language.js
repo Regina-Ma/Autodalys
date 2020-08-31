@@ -1479,11 +1479,11 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        postCodeText: {
+        zipCodeText: {
           type: String,
           required: true,
         },
-        postCodePlaceholder: {
+        zipCodePlaceholder: {
           type: String,
           required: true,
         },
@@ -2168,7 +2168,7 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        postCodeText: {
+        zipCodeText: {
           type: String,
           required: true,
         },
@@ -4319,7 +4319,7 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        postCodeText: {
+        zipCodeText: {
           type: String,
           required: true,
         },
@@ -4367,11 +4367,11 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        postCodeText: {
+        zipCodeText: {
           type: String,
           required: true,
         },
-        postCodePlaceholder: {
+        zipCodePlaceholder: {
           type: String,
           required: true,
         },
@@ -4483,11 +4483,11 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        postCodeText: {
+        zipCodeText: {
           type: String,
           required: true,
         },
-        postCodePlaceholder: {
+        zipCodePlaceholder: {
           type: String,
           required: true,
         },
@@ -4599,11 +4599,11 @@ const languageSchema = new Schema(
           type: String,
           required: true,
         },
-        postCodeText: {
+        zipCodeText: {
           type: String,
           required: true,
         },
-        postCodePlaceholder: {
+        zipCodePlaceholder: {
           type: String,
           required: true,
         },
