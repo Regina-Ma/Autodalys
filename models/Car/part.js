@@ -1,9 +1,5 @@
 const mongoose = require("mongoose");
 const carSchema = require("./car");
-const categorySchema = require("./category");
-const subcategorySchema = require("./category");
-const partNamesSchema = require("./category");
-const { ObjectID } = require("bson");
 
 const Schema = mongoose.Schema;
 
