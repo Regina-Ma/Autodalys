@@ -4685,8 +4685,6 @@ const languageSchema = new Schema(
         },
       },
     },
-    // DOWN FROM HERE PAGE FIELDS ARE EMPTY YET
-
     // vartotojų krepšeliai
     adminUsersCartsPage: {
       url: {
@@ -4697,21 +4695,204 @@ const languageSchema = new Schema(
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        searcUserText: {
+          type: String,
+          required: true,
+        },
+        filterButton: {
+          type: String,
+          required: true,
+        },
+        columnEmailText: {
+          type: String,
+          required: true,
+        },
+        columnCartCreatedAtText: {
+          type: String,
+          required: true,
+        },
+        columnSellersCountText: {
+          type: String,
+          required: true,
+        },
+        columnPartsCountText: {
+          type: String,
+          required: true,
+        },
+        columnActionsText: {
+          type: String,
+          required: true,
+        },
+        viewCartLink: {
+          type: String,
+          required: true,
+        },
+        editCartLink: {
+          type: String,
+          required: true,
+        },
+        createCartLink: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    adminUsersCartsViewCartWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        userText: {
+          type: String,
+          required: true,
+        },
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        sellerRatingText: {
+          type: String,
+          required: true,
+        },
+        partCodeText: {
+          type: String,
+          required: true,
+        },
+        totalAmountText: {
+          type: String,
+          required: true,
+        },
+        deliveryText: {
+          type: String,
+          required: true,
+        },
+        removeFromCartLink: {
+          type: String,
+          required: true,
+        },
+        editCartLink: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersCartsAddCartWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        enterUserEmailText: {
+          type: String,
+          required: true,
+        },
+        userText: {
+          type: String,
+          required: true,
+        },
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        sellerRatingText: {
+          type: String,
+          required: true,
+        },
+        partCodeText: {
+          type: String,
+          required: true,
+        },
+        totalAmountText: {
+          type: String,
+          required: true,
+        },
+        deliveryText: {
+          type: String,
+          required: true,
+        },
+        removeFromCartLink: {
+          type: String,
+          required: true,
+        },
+        addPartToCartText: {
+          type: String,
+          required: true,
+        },
+        addPartToCartPlaceholder: {
+          type: String,
+          required: true,
+        },
+        addPartToCartButton: {
+          type: String,
+          required: true,
+        },
+        saveCartButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersCartsEditCartWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        userText: {
+          type: String,
+          required: true,
+        },
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        sellerRatingText: {
+          type: String,
+          required: true,
+        },
+        partCodeText: {
+          type: String,
+          required: true,
+        },
+        totalAmountText: {
+          type: String,
+          required: true,
+        },
+        deliveryText: {
+          type: String,
+          required: true,
+        },
+        removeFromCartLink: {
+          type: String,
+          required: true,
+        },
+        addPartToCartText: {
+          type: String,
+          required: true,
+        },
+        addPartToCartPlaceholder: {
+          type: String,
+          required: true,
+        },
+        addPartToCartButton: {
+          type: String,
+          required: true,
+        },
+        saveCartButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     // vartotojų ardomi automobiliai
     adminUsersCarsPage: {
@@ -4723,28 +4904,392 @@ const languageSchema = new Schema(
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        searcUserText: {
+          type: String,
+          required: true,
+        },
+        searchCarIdText: {
+          type: String,
+          required: true,
+        },
+        searchCarMakeText: {
+          type: String,
+          required: true,
+        },
+        searchCarModelText: {
+          type: String,
+          required: true,
+        },
+        filterButton: {
+          type: String,
+          required: true,
+        },
+        columnCarText: {
+          type: String,
+          required: true,
+        },
+        columnCarEneteredAtText: {
+          type: String,
+          required: true,
+        },
+        columnCarSellerText: {
+          type: String,
+          required: true,
+        },
+        columnCarSellerEmailText: {
+          type: String,
+          required: true,
+        },
+        columnCarProductionYearText: {
+          type: String,
+          required: true,
+        },
+        columnCarMakeText: {
+          type: String,
+          required: true,
+        },
+        columnCarModelText: {
+          type: String,
+          required: true,
+        },
+        columnPartsCountText: {
+          type: String,
+          required: true,
+        },
+        columnActionsText: {
+          type: String,
+          required: true,
+        },
+        viewCarLink: {
+          type: String,
+          required: true,
+        },
+        editCarLink: {
+          type: String,
+          required: true,
+        },
+        deleteCarLink: {
+          type: String,
+          required: true,
+        },
+        addPartLink: {
+          type: String,
+          required: true,
+        },
+        addCarButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersCarsViewCarWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        carIdText: {
+          type: String,
+          required: true,
+        },
+        makeText: {
+          type: String,
+          required: true,
+        },
+        modelText: {
+          type: String,
+          required: true,
+        },
+        engineText: {
+          type: String,
+          required: true,
+        },
+        fuelTypeText: {
+          type: String,
+          required: true,
+        },
+        engineCapacityText: {
+          type: String,
+          required: true,
+        },
+        enginePowerText: {
+          type: String,
+          required: true,
+        },
+        productionYearText: {
+          type: String,
+          required: true,
+        },
+        colorText: {
+          type: String,
+          required: true,
+        },
+        steeringWheelPositionText: {
+          type: String,
+          required: true,
+        },
+        transmissionText: {
+          type: String,
+          required: true,
+        },
+        bodyTypeText: {
+          type: String,
+          required: true,
+        },
+        drivingWheelsText: {
+          type: String,
+          required: true,
+        },
+        editCarButton: {
+          type: String,
+          required: true,
+        },
+        deleteCarButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersCarsAddWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        makeText: {
+          type: String,
+          required: true,
+        },
+        makePlaceholder: {
+          type: String,
+          required: true,
+        },
+        modelText: {
+          type: String,
+          required: true,
+        },
+        modelPlaceholder: {
+          type: String,
+          required: true,
+        },
+        engineText: {
+          type: String,
+          required: true,
+        },
+        enginePlaceholder: {
+          type: String,
+          required: true,
+        },
+        fuelTypeText: {
+          type: String,
+          required: true,
+        },
+        fuelTypePlaceholder: {
+          type: String,
+          required: true,
+        },
+        engineCapacityText: {
+          type: String,
+          required: true,
+        },
+        engineCapacityPlaceholder: {
+          type: String,
+          required: true,
+        },
+        enginePowerText: {
+          type: String,
+          required: true,
+        },
+        enginePowerPlaceholder: {
+          type: String,
+          required: true,
+        },
+        productionYearText: {
+          type: String,
+          required: true,
+        },
+        productionYearPlaceholder: {
+          type: String,
+          required: true,
+        },
+        colorText: {
+          type: String,
+          required: true,
+        },
+        colorPlaceholder: {
+          type: String,
+          required: true,
+        },
+        steeringWheelPositionText: {
+          type: String,
+          required: true,
+        },
+        steeringWheelPositionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        transmissionText: {
+          type: String,
+          required: true,
+        },
+        transmissionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        bodyTypeText: {
+          type: String,
+          required: true,
+        },
+        bodyTypePlaceholder: {
+          type: String,
+          required: true,
+        },
+        drivingWheelsText: {
+          type: String,
+          required: true,
+        },
+        drivingWheelsPlaceholder: {
+          type: String,
+          required: true,
+        },
+        uploadPhotosText: {
+          type: String,
+          required: true,
+        },
+        uploadPhotosButton: {
+          type: String,
+          required: true,
+        },
+        saveCarButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersCarsEditWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        makeText: {
+          type: String,
+          required: true,
+        },
+        makePlaceholder: {
+          type: String,
+          required: true,
+        },
+        modelText: {
+          type: String,
+          required: true,
+        },
+        modelPlaceholder: {
+          type: String,
+          required: true,
+        },
+        engineText: {
+          type: String,
+          required: true,
+        },
+        enginePlaceholder: {
+          type: String,
+          required: true,
+        },
+        fuelTypeText: {
+          type: String,
+          required: true,
+        },
+        fuelTypePlaceholder: {
+          type: String,
+          required: true,
+        },
+        engineCapacityText: {
+          type: String,
+          required: true,
+        },
+        engineCapacityPlaceholder: {
+          type: String,
+          required: true,
+        },
+        enginePowerText: {
+          type: String,
+          required: true,
+        },
+        enginePowerPlaceholder: {
+          type: String,
+          required: true,
+        },
+        productionYearText: {
+          type: String,
+          required: true,
+        },
+        productionYearPlaceholder: {
+          type: String,
+          required: true,
+        },
+        colorText: {
+          type: String,
+          required: true,
+        },
+        colorPlaceholder: {
+          type: String,
+          required: true,
+        },
+        steeringWheelPositionText: {
+          type: String,
+          required: true,
+        },
+        steeringWheelPositionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        transmissionText: {
+          type: String,
+          required: true,
+        },
+        transmissionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        bodyTypeText: {
+          type: String,
+          required: true,
+        },
+        bodyTypePlaceholder: {
+          type: String,
+          required: true,
+        },
+        drivingWheelsText: {
+          type: String,
+          required: true,
+        },
+        drivingWheelsPlaceholder: {
+          type: String,
+          required: true,
+        },
+        uploadPhotosText: {
+          type: String,
+          required: true,
+        },
+        uploadPhotosButton: {
+          type: String,
+          required: true,
+        },
+        updateCarButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     // vartotojų parduodamos detalės
     adminUsersPartsPage: {
@@ -4756,29 +5301,882 @@ const languageSchema = new Schema(
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        searcUserText: {
+          type: String,
+          required: true,
+        },
+        searchCarIdText: {
+          type: String,
+          required: true,
+        },
+        searchCarMakeText: {
+          type: String,
+          required: true,
+        },
+        searchCarModelText: {
+          type: String,
+          required: true,
+        },
+        searchPartNameText: {
+          type: String,
+          required: true,
+        },
+        searchPartProductCodeText: {
+          type: String,
+          required: true,
+        },
+        filterButton: {
+          type: String,
+          required: true,
+        },
+        columnPartProductCodeText: {
+          type: String,
+          required: true,
+        },
+        columnPartCreatedAtText: {
+          type: String,
+          required: true,
+        },
+        columnPartSellerNameText: {
+          type: String,
+          required: true,
+        },
+        columnPartEmailText: {
+          type: String,
+          required: true,
+        },
+        columnCarIdText: {
+          type: String,
+          required: true,
+        },
+        columnCarProductionYearText: {
+          type: String,
+          required: true,
+        },
+        columnCarMakeText: {
+          type: String,
+          required: true,
+        },
+        columnCarModelText: {
+          type: String,
+          required: true,
+        },
+        columnPartConditionText: {
+          type: String,
+          required: true,
+        },
+        columnPartPriceText: {
+          type: String,
+          required: true,
+        },
+        columnActionsText: {
+          type: String,
+          required: true,
+        },
+        viewPartLink: {
+          type: String,
+          required: true,
+        },
+        editPartLink: {
+          type: String,
+          required: true,
+        },
+        copyPartLink: {
+          type: String,
+          required: true,
+        },
+        deletePartLink: {
+          type: String,
+          required: true,
+        },
+        addPartButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersPartsViewPartWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        makeText: {
+          type: String,
+          required: true,
+        },
+        modelText: {
+          type: String,
+          required: true,
+        },
+        engineText: {
+          type: String,
+          required: true,
+        },
+        fuelTypeText: {
+          type: String,
+          required: true,
+        },
+        engineCapacityText: {
+          type: String,
+          required: true,
+        },
+        enginePowerText: {
+          type: String,
+          required: true,
+        },
+        productionYearText: {
+          type: String,
+          required: true,
+        },
+        colorText: {
+          type: String,
+          required: true,
+        },
+        steeringWheelPositionText: {
+          type: String,
+          required: true,
+        },
+        transmissionText: {
+          type: String,
+          required: true,
+        },
+        bodyTypeText: {
+          type: String,
+          required: true,
+        },
+        drivingWheelsText: {
+          type: String,
+          required: true,
+        },
+        mileageText: {
+          type: String,
+          required: true,
+        },
+        partCategoryText: {
+          type: String,
+          required: true,
+        },
+        partSubcategoryText: {
+          type: String,
+          required: true,
+        },
+        partNameText: {
+          type: String,
+          required: true,
+        },
+        partConditionText: {
+          type: String,
+          required: true,
+        },
+        partPositionText: {
+          type: String,
+          required: true,
+        },
+        partCodeText: {
+          type: String,
+          required: true,
+        },
+        partLengthText: {
+          type: String,
+          required: true,
+        },
+        partWidthText: {
+          type: String,
+          required: true,
+        },
+        partHeightText: {
+          type: String,
+          required: true,
+        },
+        partWeightText: {
+          type: String,
+          required: true,
+        },
+        partsPriceText: {
+          type: String,
+          required: true,
+        },
+        partPhotosText: {
+          type: String,
+          required: true,
+        },
+        partDescriptionText: {
+          type: String,
+          required: true,
+        },
+        editPartButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersPartsAddPartWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        chooseCarText: {
+          type: String,
+          required: true,
+        },
+        useChosenCarButton: {
+          type: String,
+          required: true,
+        },
+        makeText: {
+          type: String,
+          required: true,
+        },
+        makePlaceholder: {
+          type: String,
+          required: true,
+        },
+        modelText: {
+          type: String,
+          required: true,
+        },
+        modelPlaceholder: {
+          type: String,
+          required: true,
+        },
+        engineText: {
+          type: String,
+          required: true,
+        },
+        enginePlaceholder: {
+          type: String,
+          required: true,
+        },
+        fuelTypeText: {
+          type: String,
+          required: true,
+        },
+        fuelTypePlaceholder: {
+          type: String,
+          required: true,
+        },
+        engineCapacityText: {
+          type: String,
+          required: true,
+        },
+        enginePowerText: {
+          type: String,
+          required: true,
+        },
+        enginePowerPlaceholder: {
+          type: String,
+          required: true,
+        },
+        productionYearText: {
+          type: String,
+          required: true,
+        },
+        productionYearPlaceholder: {
+          type: String,
+          required: true,
+        },
+        colorText: {
+          type: String,
+          required: true,
+        },
+        colorPlaceholder: {
+          type: String,
+          required: true,
+        },
+        steeringWheelPositionText: {
+          type: String,
+          required: true,
+        },
+        steeringWheelPositionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        transmissionText: {
+          type: String,
+          required: true,
+        },
+        transmissionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        bodyTypeText: {
+          type: String,
+          required: true,
+        },
+        bodyTypePlaceholder: {
+          type: String,
+          required: true,
+        },
+        drivingWheelsText: {
+          type: String,
+          required: true,
+        },
+        drivingWheelsPlaceholder: {
+          type: String,
+          required: true,
+        },
+        mileageText: {
+          type: String,
+          required: true,
+        },
+        mileagePlaceholder: {
+          type: String,
+          required: true,
+        },
+        partCategoryText: {
+          type: String,
+          required: true,
+        },
+        partCategoryPlaceholder: {
+          type: String,
+          required: true,
+        },
+        partSubcategoryText: {
+          type: String,
+          required: true,
+        },
+        partSubcategoryPlaceholder: {
+          type: String,
+          required: true,
+        },
+        partNameText: {
+          type: String,
+          required: true,
+        },
+        partNamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        partConditionText: {
+          type: String,
+          required: true,
+        },
+        partConditionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        partPositionText: {
+          type: String,
+          required: true,
+        },
+        partPositionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        partCodeText: {
+          type: String,
+          required: true,
+        },
+        partCodePlaceholder: {
+          type: String,
+          required: true,
+        },
+        dimensionsText: {
+          type: String,
+          required: true,
+        },
+        lengthText: {
+          type: String,
+          required: true,
+        },
+        lengthPlaceholder: {
+          type: String,
+          required: true,
+        },
+        widthText: {
+          type: String,
+          required: true,
+        },
+        widthPlaceholder: {
+          type: String,
+          required: true,
+        },
+        heightText: {
+          type: String,
+          required: true,
+        },
+        heightPlaceholder: {
+          type: String,
+          required: true,
+        },
+        weightText: {
+          type: String,
+          required: true,
+        },
+        weightPlaceholder: {
+          type: String,
+          required: true,
+        },
+        pricePlaceholder: {
+          type: String,
+          required: true,
+        },
+        pricePlaceholder: {
+          type: String,
+          required: true,
+        },
+        partPhotosText: {
+          type: String,
+          required: true,
+        },
+        partDescriptionText: {
+          type: String,
+          required: true,
+        },
+        partDescriptionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        editPartButton: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    adminUsersPartsCopyPartWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        makeText: {
+          type: String,
+          required: true,
+        },
+        makePlaceholder: {
+          type: String,
+          required: true,
+        },
+        modelText: {
+          type: String,
+          required: true,
+        },
+        modelPlaceholder: {
+          type: String,
+          required: true,
+        },
+        engineText: {
+          type: String,
+          required: true,
+        },
+        enginePlaceholder: {
+          type: String,
+          required: true,
+        },
+        fuelTypeText: {
+          type: String,
+          required: true,
+        },
+        fuelTypePlaceholder: {
+          type: String,
+          required: true,
+        },
+        engineCapacityText: {
+          type: String,
+          required: true,
+        },
+        enginePowerText: {
+          type: String,
+          required: true,
+        },
+        enginePowerPlaceholder: {
+          type: String,
+          required: true,
+        },
+        productionYearText: {
+          type: String,
+          required: true,
+        },
+        productionYearPlaceholder: {
+          type: String,
+          required: true,
+        },
+        colorText: {
+          type: String,
+          required: true,
+        },
+        colorPlaceholder: {
+          type: String,
+          required: true,
+        },
+        steeringWheelPositionText: {
+          type: String,
+          required: true,
+        },
+        steeringWheelPositionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        transmissionText: {
+          type: String,
+          required: true,
+        },
+        transmissionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        bodyTypeText: {
+          type: String,
+          required: true,
+        },
+        bodyTypePlaceholder: {
+          type: String,
+          required: true,
+        },
+        drivingWheelsText: {
+          type: String,
+          required: true,
+        },
+        drivingWheelsPlaceholder: {
+          type: String,
+          required: true,
+        },
+        mileageText: {
+          type: String,
+          required: true,
+        },
+        mileagePlaceholder: {
+          type: String,
+          required: true,
+        },
+        partCategoryText: {
+          type: String,
+          required: true,
+        },
+        partCategoryPlaceholder: {
+          type: String,
+          required: true,
+        },
+        partSubcategoryText: {
+          type: String,
+          required: true,
+        },
+        partSubcategoryPlaceholder: {
+          type: String,
+          required: true,
+        },
+        partNameText: {
+          type: String,
+          required: true,
+        },
+        partNamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        partConditionText: {
+          type: String,
+          required: true,
+        },
+        partConditionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        partPositionText: {
+          type: String,
+          required: true,
+        },
+        partPositionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        partCodeText: {
+          type: String,
+          required: true,
+        },
+        partCodePlaceholder: {
+          type: String,
+          required: true,
+        },
+        dimensionsText: {
+          type: String,
+          required: true,
+        },
+        lengthText: {
+          type: String,
+          required: true,
+        },
+        lengthPlaceholder: {
+          type: String,
+          required: true,
+        },
+        widthText: {
+          type: String,
+          required: true,
+        },
+        widthPlaceholder: {
+          type: String,
+          required: true,
+        },
+        heightText: {
+          type: String,
+          required: true,
+        },
+        heightPlaceholder: {
+          type: String,
+          required: true,
+        },
+        weightText: {
+          type: String,
+          required: true,
+        },
+        weightPlaceholder: {
+          type: String,
+          required: true,
+        },
+        pricePlaceholder: {
+          type: String,
+          required: true,
+        },
+        pricePlaceholder: {
+          type: String,
+          required: true,
+        },
+        partPhotosText: {
+          type: String,
+          required: true,
+        },
+        partDescriptionText: {
+          type: String,
+          required: true,
+        },
+        partDescriptionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        savePartButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersPartsEditPartWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        makeText: {
+          type: String,
+          required: true,
+        },
+        makePlaceholder: {
+          type: String,
+          required: true,
+        },
+        modelText: {
+          type: String,
+          required: true,
+        },
+        modelPlaceholder: {
+          type: String,
+          required: true,
+        },
+        engineText: {
+          type: String,
+          required: true,
+        },
+        enginePlaceholder: {
+          type: String,
+          required: true,
+        },
+        fuelTypeText: {
+          type: String,
+          required: true,
+        },
+        fuelTypePlaceholder: {
+          type: String,
+          required: true,
+        },
+        engineCapacityText: {
+          type: String,
+          required: true,
+        },
+        enginePowerText: {
+          type: String,
+          required: true,
+        },
+        enginePowerPlaceholder: {
+          type: String,
+          required: true,
+        },
+        productionYearText: {
+          type: String,
+          required: true,
+        },
+        productionYearPlaceholder: {
+          type: String,
+          required: true,
+        },
+        colorText: {
+          type: String,
+          required: true,
+        },
+        colorPlaceholder: {
+          type: String,
+          required: true,
+        },
+        steeringWheelPositionText: {
+          type: String,
+          required: true,
+        },
+        steeringWheelPositionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        transmissionText: {
+          type: String,
+          required: true,
+        },
+        transmissionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        bodyTypeText: {
+          type: String,
+          required: true,
+        },
+        bodyTypePlaceholder: {
+          type: String,
+          required: true,
+        },
+        drivingWheelsText: {
+          type: String,
+          required: true,
+        },
+        drivingWheelsPlaceholder: {
+          type: String,
+          required: true,
+        },
+        mileageText: {
+          type: String,
+          required: true,
+        },
+        mileagePlaceholder: {
+          type: String,
+          required: true,
+        },
+        partCategoryText: {
+          type: String,
+          required: true,
+        },
+        partCategoryPlaceholder: {
+          type: String,
+          required: true,
+        },
+        partSubcategoryText: {
+          type: String,
+          required: true,
+        },
+        partSubcategoryPlaceholder: {
+          type: String,
+          required: true,
+        },
+        partNameText: {
+          type: String,
+          required: true,
+        },
+        partNamePlaceholder: {
+          type: String,
+          required: true,
+        },
+        partConditionText: {
+          type: String,
+          required: true,
+        },
+        partConditionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        partPositionText: {
+          type: String,
+          required: true,
+        },
+        partPositionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        partCodeText: {
+          type: String,
+          required: true,
+        },
+        partCodePlaceholder: {
+          type: String,
+          required: true,
+        },
+        dimensionsText: {
+          type: String,
+          required: true,
+        },
+        lengthText: {
+          type: String,
+          required: true,
+        },
+        lengthPlaceholder: {
+          type: String,
+          required: true,
+        },
+        widthText: {
+          type: String,
+          required: true,
+        },
+        widthPlaceholder: {
+          type: String,
+          required: true,
+        },
+        heightText: {
+          type: String,
+          required: true,
+        },
+        heightPlaceholder: {
+          type: String,
+          required: true,
+        },
+        weightText: {
+          type: String,
+          required: true,
+        },
+        weightPlaceholder: {
+          type: String,
+          required: true,
+        },
+        pricePlaceholder: {
+          type: String,
+          required: true,
+        },
+        pricePlaceholder: {
+          type: String,
+          required: true,
+        },
+        partPhotosText: {
+          type: String,
+          required: true,
+        },
+        partDescriptionText: {
+          type: String,
+          required: true,
+        },
+        partDescriptionPlaceholder: {
+          type: String,
+          required: true,
+        },
+        updatePartButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
+
     // vartotojų užsakymai
     adminUsersOrdersPage: {
       url: {
@@ -4789,8 +6187,94 @@ const languageSchema = new Schema(
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        searchSellerText: {
+          type: String,
+          required: true,
+        },
+        searcBuyerText: {
+          type: String,
+          required: true,
+        },
+        searchOrderText: {
+          type: String,
+          required: true,
+        },
+        filterButton: {
+          type: String,
+          required: true,
+        },
+        columnOrderNumberText: {
+          type: String,
+          required: true,
+        },
+        columnOrderCreatedAtText: {
+          type: String,
+          required: true,
+        },
+        columnOrderSellerText: {
+          type: String,
+          required: true,
+        },
+        columnOrderBuyerText: {
+          type: String,
+          required: true,
+        },
+        columnPartsAmountText: {
+          type: String,
+          required: true,
+        },
+        columnPartsTotalPriceText: {
+          type: String,
+          required: true,
+        },
+        columnDeliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        columnDeliveryPriceText: {
+          type: String,
+          required: true,
+        },
+        columnTotalPriceText: {
+          type: String,
+          required: true,
+        },
+        columnOrderStatusText: {
+          type: String,
+          required: true,
+        },
+        columnActionsText: {
+          type: String,
+          required: true,
+        },
+        viewOrderLink: {
+          type: String,
+          required: true,
+        },
+        editOrderLink: {
+          type: String,
+          required: true,
+        },
+        deleteOrderLink: {
+          type: String,
+          required: true,
+        },
+        createOrderButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
+    // DOWN FROM HERE PAGE FIELDS ARE EMPTY YET
     adminUsersOrdersViewOrderWindow: {
       pageTitle: {
         type: String,
