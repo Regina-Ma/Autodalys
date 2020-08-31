@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 const carSchema = require("./car");
-const powerSchema = require("./engine");
 const categorySchema = require("./category");
 const subcategorySchema = require("./category");
 const partNamesSchema = require("./category");
+const { ObjectID } = require("bson");
 
 const Schema = mongoose.Schema;
 
@@ -19,25 +19,31 @@ const partSchema = new Schema(
 
     // detalės kategorija
     category: {
-      type: categorySchema,
+      type: String,
       required: true,
       unique: true,
     },
 
     // detalės subkategorija
     subcategory: {
-      type: subcategorySchema,
+      type: String,
       required: true,
       unique: true,
     },
 
     // detalės pavadinimas (sub-subkategorija)
     partName: {
-      type: partNamesSchema,
-      required: true,
-      unique: true,
+      PartNameId: {
+        type: Schema.Types.ObjectId,
+        ref: "partNamesSchema",
+      },
+      name: {
+        type: String,
+        required: true,
+        unique: true,
+      },
     },
-    // detalių kodai
+    // detalės kodai
     codes: [
       {
         type: String,
@@ -81,7 +87,7 @@ const partSchema = new Schema(
 
       // automobilio variklio galingumas
       enginePower: {
-        type: powerSchema,
+        type: Number,
         required: false,
       },
 
