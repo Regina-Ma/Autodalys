@@ -6274,28 +6274,263 @@ const languageSchema = new Schema(
         },
       },
     },
-    // DOWN FROM HERE PAGE FIELDS ARE EMPTY YET
     adminUsersOrdersViewOrderWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        orderNumberText: {
+          type: String,
+          required: true,
+        },
+        orderDateText: {
+          type: String,
+          required: true,
+        },
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        buyerInfoText: {
+          type: String,
+          required: true,
+        },
+        orderStatusText: {
+          type: String,
+          required: true,
+        },
+        orderStatusType: {
+          type: String,
+          required: true,
+        },
+        partsTitle: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+        deliveryPriceText: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        deliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        commentText: {
+          type: String,
+          required: true,
+        },
+        totalPriceText: {
+          type: String,
+          required: true,
+        },
+        printStickerLink: {
+          type: String,
+          required: true,
+        },
+        callCourierLink: {
+          type: String,
+          required: true,
+        },
+        orderReadyLink: {
+          type: String,
+          required: true,
+        },
+        orderDeliveredLink: {
+          type: String,
+          required: true,
+        },
+        editOrderLink: {
+          type: String,
+          required: true,
+        },
+        deleteOrderLink: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersOrdersAddOrderWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        orderDateText: {
+          type: String,
+          required: true,
+        },
+        saveDateButton: {
+          type: String,
+          required: true,
+        },
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        saveSellerButton: {
+          type: String,
+          required: true,
+        },
+        buyerInfoText: {
+          type: String,
+          required: true,
+        },
+        saveBuyerButton: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+        savePartButton: {
+          type: String,
+          required: true,
+        },
+        deletePartFromOrderLink: {
+          type: String,
+          required: true,
+        },
+        addPartToOrderText: {
+          type: String,
+          required: true,
+        },
+        addPartButton: {
+          type: String,
+          required: true,
+        },
+        deliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        totalPriceText: {
+          type: String,
+          required: true,
+        },
+        selectSavedAddressText: {
+          type: String,
+          required: true,
+        },
+        saveSelectedAddressButton: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        deliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        commentText: {
+          type: String,
+          required: true,
+        },
+        saveButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersOrdersEditOrderWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        orderNumberText: {
+          type: String,
+          required: true,
+        },
+        orderDateText: {
+          type: String,
+          required: true,
+        },
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        buyerInfoText: {
+          type: String,
+          required: true,
+        },
+        selectSavedAddressText: {
+          type: String,
+          required: true,
+        },
+        saveSelectedAddressButton: {
+          type: String,
+          required: true,
+        },
+        saveOrderBuyerButton: {
+          type: String,
+          required: true,
+        },
+        partsTitle: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+        deletePartFromOrderLink: {
+          type: String,
+          required: true,
+        },
+        addPartToOrderText: {
+          type: String,
+          required: true,
+        },
+        addPartButton: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        deliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        commentText: {
+          type: String,
+          required: true,
+        },
+        totalPriceText: {
+          type: String,
+          required: true,
+        },
+        saveButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
+
     // vartotojų sąskaitos faktūros
     adminUsersInvoicesPage: {
       url: {
@@ -6306,28 +6541,332 @@ const languageSchema = new Schema(
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        searchSellerText: {
+          type: String,
+          required: true,
+        },
+        searcBuyerText: {
+          type: String,
+          required: true,
+        },
+        searchInvoiceText: {
+          type: String,
+          required: true,
+        },
+        filterButton: {
+          type: String,
+          required: true,
+        },
+        sortText: {
+          type: String,
+          required: true,
+        },
+        columnInvoiceNumberText: {
+          type: String,
+          required: true,
+        },
+        columnInvoiceDateText: {
+          type: String,
+          required: true,
+        },
+        columnInvoiceSellerText: {
+          type: String,
+          required: true,
+        },
+        columnInvoiceBuyerText: {
+          type: String,
+          required: true,
+        },
+        columnInvoiceBuyerEmailText: {
+          type: String,
+          required: true,
+        },
+        columnPartsAmountText: {
+          type: String,
+          required: true,
+        },
+        columnPriceWithoutVatText: {
+          type: String,
+          required: true,
+        },
+        columnPriceVatText: {
+          type: String,
+          required: true,
+        },
+        columnTotalPriceText: {
+          type: String,
+          required: true,
+        },
+        columnInvoiceStatusText: {
+          type: String,
+          required: true,
+        },
+        columnActionsText: {
+          type: String,
+          required: true,
+        },
+        viewInvoiceLink: {
+          type: String,
+          required: true,
+        },
+        editInvoiceLink: {
+          type: String,
+          required: true,
+        },
+        deleteInvoiceLink: {
+          type: String,
+          required: true,
+        },
+        createInvoiceButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersInvoicesViewInvoiceWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        invoiceNumberText: {
+          type: String,
+          required: true,
+        },
+        invoiceDateText: {
+          type: String,
+          required: true,
+        },
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        buyerInfoText: {
+          type: String,
+          required: true,
+        },
+        partsTitle: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+        deliveryPriceText: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        deliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        totalPriceInWordsText: {
+          type: String,
+          required: true,
+        },
+        totalPriceText: {
+          type: String,
+          required: true,
+        },
+        printInvoiceLink: {
+          type: String,
+          required: true,
+        },
+        editInvoiceLink: {
+          type: String,
+          required: true,
+        },
+        deleteInvoiceLink: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersInvoicesAddInvoiceWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        invoiceNumberText: {
+          type: String,
+          required: true,
+        },
+        invoiceTypeText: {
+          type: String,
+          required: true,
+        },
+        invoiceDateText: {
+          type: String,
+          required: true,
+        },
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        saveSellerButton: {
+          type: String,
+          required: true,
+        },
+        buyerInfoText: {
+          type: String,
+          required: true,
+        },
+        saveBuyerButton: {
+          type: String,
+          required: true,
+        },
+        partsTitle: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+        deletePartFromOrderLink: {
+          type: String,
+          required: true,
+        },
+        addPartToOrderText: {
+          type: String,
+          required: true,
+        },
+        addPartButton: {
+          type: String,
+          required: true,
+        },
+        deliveryPriceText: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        deliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        totalPriceText: {
+          type: String,
+          required: true,
+        },
+        saveButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersInvoicesEditInvoiceWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        invoiceNumberText: {
+          type: String,
+          required: true,
+        },
+        invoiceTypeText: {
+          type: String,
+          required: true,
+        },
+        invoiceDateText: {
+          type: String,
+          required: true,
+        },
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        changeSellerText: {
+          type: String,
+          required: true,
+        },
+        changeSellerButton: {
+          type: String,
+          required: true,
+        },
+        buyerInfoText: {
+          type: String,
+          required: true,
+        },
+        changeBuyerText: {
+          type: String,
+          required: true,
+        },
+        changeBuyerButton: {
+          type: String,
+          required: true,
+        },
+        partsTitle: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+        deletePartFromOrderLink: {
+          type: String,
+          required: true,
+        },
+        addPartToOrderText: {
+          type: String,
+          required: true,
+        },
+        addPartButton: {
+          type: String,
+          required: true,
+        },
+        deliveryPriceText: {
+          type: String,
+          required: true,
+        },
+        phoneText: {
+          type: String,
+          required: true,
+        },
+        deliveryTypeText: {
+          type: String,
+          required: true,
+        },
+        addressText: {
+          type: String,
+          required: true,
+        },
+        totalPriceText: {
+          type: String,
+          required: true,
+        },
+        saveButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     // vartotojų užklausos
     adminUsersQueriesPage: {
@@ -6339,21 +6878,248 @@ const languageSchema = new Schema(
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        queriesSettingsTitle: {
+          type: String,
+          required: true,
+        },
+        searchSellerText: {
+          type: String,
+          required: true,
+        },
+        searchSellerButton: {
+          type: String,
+          required: true,
+        },
+        columnSellerNameText: {
+          type: String,
+          required: true,
+        },
+        columnSellerEmailText: {
+          type: String,
+          required: true,
+        },
+        columnQuerieModelsCountText: {
+          type: String,
+          required: true,
+        },
+        editSettingsLink: {
+          type: String,
+          required: true,
+        },
+        deleteSettingsLink: {
+          type: String,
+          required: true,
+        },
+        queriesReceivedTitle: {
+          type: String,
+          required: true,
+        },
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        searchSellerText: {
+          type: String,
+          required: true,
+        },
+        searchSenderText: {
+          type: String,
+          required: true,
+        },
+        searchQueryText: {
+          type: String,
+          required: true,
+        },
+        searchQueryStatusText: {
+          type: String,
+          required: true,
+        },
+        searchCarMakeText: {
+          type: String,
+          required: true,
+        },
+        searchCarModelText: {
+          type: String,
+          required: true,
+        },
+        searchPartProductCodeText: {
+          type: String,
+          required: true,
+        },
+        filterButton: {
+          type: String,
+          required: true,
+        },
+        sortText: {
+          type: String,
+          required: true,
+        },
+        columnQueryNumberText: {
+          type: String,
+          required: true,
+        },
+        columnQueryDateText: {
+          type: String,
+          required: true,
+        },
+        columnCarMakeText: {
+          type: String,
+          required: true,
+        },
+        columnCarModelText: {
+          type: String,
+          required: true,
+        },
+        columnSenderText: {
+          type: String,
+          required: true,
+        },
+        columnReceiversCountText: {
+          type: String,
+          required: true,
+        },
+        columnQueriesAnsweredCount: {
+          type: String,
+          required: true,
+        },
+        columnActionsText: {
+          type: String,
+          required: true,
+        },
+        viewQueryLink: {
+          type: String,
+          required: true,
+        },
+        editQueryLink: {
+          type: String,
+          required: true,
+        },
+        deleteQueryLink: {
+          type: String,
+          required: true,
+        },
+      },
+    },
+    adminUsersQueriesEditQuerySettingsWindow: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
+      pageFields: {
+        sellerInfoText: {
+          type: String,
+          required: true,
+        },
+        getQueriesText: {
+          type: String,
+          required: true,
+        },
+        getAllQueriesText: {
+          type: String,
+          required: true,
+        },
+        makeText: {
+          type: String,
+          required: true,
+        },
+        modelText: {
+          type: String,
+          required: true,
+        },
+        saveBuyerButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersQueriesViewQueryWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        queryNumberText: {
+          type: String,
+          required: true,
+        },
+        queryDateText: {
+          type: String,
+          required: true,
+        },
+        queryStatusTitle: {
+          type: String,
+          required: true,
+        },
+        queryAnsweredButton: {
+          type: String,
+          required: true,
+        },
+        queryFromInfoText: {
+          type: String,
+          required: true,
+        },
+        queryCommentText: {
+          type: String,
+          required: true,
+        },
+        queryPhotosText: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+      },
     },
     adminUsersQueriesEditQueryWindow: {
       pageTitle: {
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        queryNumberText: {
+          type: String,
+          required: true,
+        },
+        queryDateText: {
+          type: String,
+          required: true,
+        },
+        queryStatusTitle: {
+          type: String,
+          required: true,
+        },
+        queryAnsweredButton: {
+          type: String,
+          required: true,
+        },
+        queryFromInfoText: {
+          type: String,
+          required: true,
+        },
+        queryCommentText: {
+          type: String,
+          required: true,
+        },
+        queryPhotosText: {
+          type: String,
+          required: true,
+        },
+        partProductCodeText: {
+          type: String,
+          required: true,
+        },
+        saveQueryButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
     // vartotojų duomenų importavimas/eksportavimas
     adminUsersImportExportPage: {
@@ -6365,7 +7131,56 @@ const languageSchema = new Schema(
         type: String,
         required: true,
       },
-      pageFields: {},
+      pageFields: {
+        importTitle: {
+          type: String,
+          required: true,
+        },
+        searchSellerText: {
+          type: String,
+          required: true,
+        },
+        searchSellerButton: {
+          type: String,
+          required: true,
+        },
+        chooseTypeText: {
+          type: String,
+          required: true,
+        },
+        partsText: {
+          type: String,
+          required: true,
+        },
+        carsText: {
+          type: String,
+          required: true,
+        },
+        importButton: {
+          type: String,
+          required: true,
+        },
+        exportTitle: {
+          type: String,
+          required: true,
+        },
+        dateFromText: {
+          type: String,
+          required: true,
+        },
+        dateToText: {
+          type: String,
+          required: true,
+        },
+        invoicesText: {
+          type: String,
+          required: true,
+        },
+        exportButton: {
+          type: String,
+          required: true,
+        },
+      },
     },
 
     // -------- turinio valdymo panelės puslapiai --------
