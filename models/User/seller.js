@@ -199,4 +199,7 @@ const sellerSchema = new Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Seller", sellerSchema);
+module.exports = {
+  Seller: mongoose.model("Seller", sellerSchema),
+  sellerSchema: sellerSchema,
+};

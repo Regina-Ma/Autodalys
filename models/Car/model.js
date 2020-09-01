@@ -57,4 +57,7 @@ modelSchema.method("modelFullName", function modelName() {
   return `${this.make} ${this.model} (${this.start} - ${this.end})`;
 });
 
-module.exports = { Model: mongoose.model("Model", modelSchema) };
+module.exports = {
+  Model: mongoose.model("Model", modelSchema),
+  modelSchema: modelSchema,
+};

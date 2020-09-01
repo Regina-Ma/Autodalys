@@ -82,4 +82,5 @@ engineSchema.method("engineFullName", function () {
 
 module.exports = {
   Engine: mongoose.model("Engine", engineSchema),
+  engineSchema: engineSchema,
 };

@@ -71,4 +71,11 @@ const categorySchema = new Schema({
   subcategories: [subcategorySchema],
 });
 
-module.exports = mongoose.model("Category", categorySchema);
+module.exports = {
+  Category: mongoose.model("Category", categorySchema),
+  SubCategory: mongoose.model("SubCategory", subcategorySchema),
+  PartName: mongoose.model("PartName", partNamesSchema),
+  CategorySchema: categorySchema,
+  SubCategorySchema: subcategorySchema,
+  PartNameSchema: partNamesSchema,
+};

@@ -195,4 +195,7 @@ const carSchema = new Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Car", carSchema);
+module.exports = {
+  Car: mongoose.model("Car", carSchema),
+  carSchema: carSchema,
+};

@@ -357,4 +357,7 @@ const partSchema = new Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Part", partSchema);
+module.exports = {
+  Part: mongoose.model("Part", partSchema),
+  partSchema: partSchema,
+};

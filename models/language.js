@@ -7462,4 +7462,7 @@ const languageSchema = new Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Language", languageSchema);
+module.exports = {
+  Language: mongoose.model("Language", languageSchema),
+  languageSchema: languageSchema,
+};

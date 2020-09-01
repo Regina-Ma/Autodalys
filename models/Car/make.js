@@ -23,4 +23,7 @@ const makeSchema = new Schema({
   ],
 });
 
-module.exports = mongoose.model("Make", makeSchema);
+module.exports = {
+  Make: mongoose.model("Make", makeSchema),
+  makeSchema: makeSchema,
+};
